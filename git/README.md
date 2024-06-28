@@ -6,7 +6,17 @@
 - [introduction](./resources/introduction.md)
 - [configurations](./resources/configurations.md)
 - [cloning](./resources/cloning.md)
-
+- [initialization](./resources/intialization.md)
+- [modifying files](./resources/modifying_files.md)
+- [project status](./resources/project_status.md)
+- [logs](./resources/logs.md)
+- [commits](./resources/commits.md)
+- [branching](./resources/branching.md)
+- [pull and synchronize](./resources/pull_and_synchronize.md)
+- [push](./resources/push.md)
+- [rebase](./resources/rebase.md)
+- [tagging](./resources/tagging.md)
+- [advanced](./resources/advanced.md)
 
 
 ## Online resources
@@ -20,7 +30,7 @@
 
 
 ## git cheetsheets
-- [Git From Scratch](./pdf/9353.pdf)
+- [Git From Scratch](./pdf/git_from_scratch.pdf)
 - [Learn Git Fundamentals - A Handbook on Day-to-Day Development Tasks](https://www.freecodecamp.org/news/learn-git-basics/)
 - [How to Use Git and GitHub - a Guide for Beginners and Experienced Developers](https://www.freecodecamp.org/news/guide-to-git-github-for-beginners-and-experienced-devs/)
 
