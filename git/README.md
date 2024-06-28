@@ -1,10 +1,11 @@
 # git Helper
 
-##### [readme viewer online](https://readme.so/editor)
+### [readme viewer online](https://readme.so/editor)
 
 ## Table of contents
 - [introduction](./resources/introduction.md)
-
+- [configurations](./resources/configurations.md)
+- [cloning](./resources/cloning.md)
 
 
 
