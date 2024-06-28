@@ -6,7 +6,7 @@
 - [linux]()
 - [networking]()
 - [certificates]()
-- **reverse proxy**
+- [reverse proxy]()
     - [haproxy]()
     - [nginx]()
 - [docker]()
@@ -15,7 +15,7 @@
 - [ansible]()
 - [jenkins]()
 - [github-actions]()
-- **public cloud**
+- [public cloud]()
     - [AWS]()
     - [GCP]()
 - [terraform]()
