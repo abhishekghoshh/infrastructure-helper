@@ -5,7 +5,7 @@
 - [git](./git/README.md)
 - [linux]()
 - [networking]()
-- [certificates]()
+- [certificates](./certificates/README.md)
 - [reverse proxy](./reverse-proxy/README.md)
     - [nginx](./reverse-proxy/nginx/README.md)
     - [haproxy](./reverse-proxy/haproxy/README.md)
