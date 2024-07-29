@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo
+  labels:
+    app: echo
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8000
+    nodePort: 30010
+    name: web
+  selector:
+    app: echo
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: echo
+spec:
+  selector:
+    matchLabels:
+      app: echo # has to match .spec.template.metadata.labels
+  serviceName: "echo"  
+  replicas: 3 # by default is 1
+  minReadySeconds: 10 # by default is 0
+  template:
+    metadata:
+      labels:
+        app: echo # has to match .spec.selector.matchLabels
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: echo
+        image: abhishek1009/echo:latest
+        ports:
+        - containerPort: 8000
+          name: web

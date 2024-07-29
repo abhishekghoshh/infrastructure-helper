@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: math-app-job
+  labels:
+    name: math-app-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: math-app-pod
+        image: ubuntu
+        command: ["expr", "3", "+", "2"]
+      restartPolicy: Never

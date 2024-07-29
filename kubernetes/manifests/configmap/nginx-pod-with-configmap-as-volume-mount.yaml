@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: skaha-desktop-app
+  namespace: default
+  labels:
+    app: nginx-pod
+spec:
+  containers:
+    - name: skaha-desktop-app
+      image: nginx
+      volumeMounts:
+      - name: nginx-volume
+        mountPath: "/etc/tokens"
+    - name: token-fetcher
+      image: redis
+      volumeMounts:
+      - name: token-volume
+        mountPath: "/etc/tokens"
+  volumes:
+  - name: nginx-volume
+    configMap:
+      name: nginx-configmap

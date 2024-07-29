@@ -1,0 +1,38 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: nginx-policy
+spec:
+  podSelector:
+    matchLabels:
+      app: nginx
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              type: frontend-api
+          namespaceSelector:
+            matchLabels:
+              env: prod
+          ipBlock:
+            cidr: 192.168.5.10/32
+      ports:
+        - protocol: TCP
+          port: 80
+  egress:
+    - to:
+        - podSelector:
+            matchLabels:
+              type: backend-api
+          namespaceSelector:
+            matchLabels:
+              env: prod
+          ipBlock:
+            cidr: 192.168.5.17/32
+      ports:
+        - protocol: TCP
+          port: 8080

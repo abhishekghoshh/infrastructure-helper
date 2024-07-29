@@ -20,6 +20,7 @@ openssl req \
 
 
 echo "CA's self-signed certificate"
+
 openssl x509 \
   -in ./output/ca/ca.crt \
   -noout -text

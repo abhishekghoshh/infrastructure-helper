@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  namespace: default
+  labels:
+    app: nginx-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      readinessProbe:
+        exec: ["cat","/app/ready"]
+        initialDelaySeconds: 10
+        periodSeconds: 5
+        failureThreshold: 8
+      livenessProbe:
+        exec: ["cat","/app/ready"]
+        initialDelaySeconds: 10
+        periodSeconds: 5
+        failureThreshold: 8
