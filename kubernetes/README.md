@@ -23,3 +23,8 @@
   - [13 Kubernetes Tricks You Didn't Know](https://overcast.blog/13-kubernetes-tricks-you-didnt-know-647de6364472)
 
 
+## Ingress and Load balancers(MetalLb)
+- [Learn about HTTPS, TLS & Certificates](https://www.youtube.com/playlist?list=PLShDm2AZYnK3cWZpOjV7nOpL7plH2Ztz0)
+- [MetalLB and NGINX Ingress // Setup External Access for Kubernetes Applications](https://www.youtube.com/watch?v=k8bxtsWe9qw)
+- [What is Kubernetes' new Gateway API](https://www.youtube.com/watch?v=OTE1X8WLg2I)
+- [Networking](https://www.youtube.com/playlist?list=PLyicRj904Z9_ZJ1SD432y-DeUYDIYqZiw)
