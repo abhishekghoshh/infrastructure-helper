@@ -24,4 +24,7 @@ git rebase -i master
 # f, fixup = like "squash", but discard this commit's log message
 # x, exec = run command (the rest of the line) using shell
 # d, drop = remove commit
+
+# There can be conflict while doing git rebase
+# Solve the conflicts like normal merge conflict, do git add and git rebase --continue
 ```

@@ -13,7 +13,7 @@
 
 ### Registries and Repositories:
 - A registry is where we store our images.
-- You can host your own registry, or you can use Docker’s public registry which is called DockerHub.
+- You can host your own registry, or you can use Docker's public registry which is called DockerHub.
 - Inside a registry, images are stored in repositories.
 - Docker repository is a collection of different docker images with the same name, that have different tags, each tag usually represents a different version of the image.
 
@@ -33,7 +33,7 @@ docker run image_name/tag
 # just to download an image, it will not run
 docker pull nginx
 
-# Docker run starts the process in the container and attaches the console to the process’s standard input, output, and standard error.
+# Docker run starts the process in the container and attaches the console to the process's standard input, output, and standard error.
 # Containers started in detached mode and exit when the root process used to run the container exits.
 
 # pull either from local or remote and run it in a deattached mode and will return the container_id
@@ -171,7 +171,7 @@ Check docker files in this order ->
 
 # CMD and ENTRYPOINT in docker:
 # If we see any dockerfile there we can find CMD, it defines the program that will be run when the container starts.
-# For nginx image -> CMD[“nginx”]
+# For nginx image -> CMD["nginx"]
 
 # Then there is another keyword ENTRYPOINT. Here can specify whatever program we want to start at the start of the container 
 # and if we add anything in the command line then it will be appended with the ENTRYPOINT. 
@@ -184,8 +184,8 @@ New version: docker run --entrypoint sleep-v2 ubuntu-sleeper 20
 
 # Ubuntu-sleeper image: it will start a ubuntu os and then start sleep process for 10 seconds
 FROM UBUNTU					# Base image
-ENTRYPOINT [“sleep”]		# Command on start
-CMD [“10”]					# default value
+ENTRYPOINT ["sleep"]		# Command on start
+CMD ["10"]					# default value
 
 ```
 

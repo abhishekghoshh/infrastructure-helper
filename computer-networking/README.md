@@ -3,8 +3,9 @@
 ## Books
 
 ## Youtube
-- **playlist**
-  - [Sunny Classroom](https://www.youtube.com/@sunnyclassroom24/playlists)
+- [General Security Education](https://www.youtube.com/playlist?list=PLhixgUqwRTjz6VwU3uDK_Pk6F5Tl0KuoC)
+- [Computer Networking Full Course - OSI Model Deep Dive with Real Life Examples](https://www.youtube.com/watch?v=IPvYjXCsTg8)
+- [Sunny Classroom](https://www.youtube.com/@sunnyclassroom24/playlists)
 
 
 

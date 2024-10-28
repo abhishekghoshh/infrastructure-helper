@@ -1,10 +1,8 @@
 
 
 
-## Introduction
+## Youtube
 - [What is OpenTelemetry?](https://www.youtube.com/watch?v=ASgosEzG4Pw)
-
-## Playlist
 - [OpenTelemetry](https://www.youtube.com/playlist?list=PL6VBQyIvTlRjAMeeZN5yfD07X8DdYonnI)
 - [Observability](https://www.youtube.com/playlist?list=PLyicRj904Z9-kyG_J5DAXbYhRmWUJ-Iqf)
 
@@ -31,6 +29,3 @@
 
 ## Udemy
 - [Observability in Cloud Native apps using OpenTelemetry](https://thoughtworks.udemy.com/course/observability-in-cloud-native-apps-using-opentelemetry/)
-- [Observability with Grafana, Prometheus,Loki, Alloy and Tempo](https://thoughtworks.udemy.com/course/grafana-graphite-and-statsd-visualize-metrics/)
-- [Prometheus | The Complete Hands-On for Monitoring & Alerting](https://thoughtworks.udemy.com/course/prometheus-course/)
-- [Grafana](https://thoughtworks.udemy.com/course/grafana-tutorial/)

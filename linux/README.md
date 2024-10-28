@@ -1,72 +1,26 @@
-# Linux helper
-
-## Table of contents
-- 
+# Linux
 
 
-
-# Linux VM in your own system
-
-
-
-
-
-### Command to start the wsl 2 from windows
-
-```
-wsl --set-default-version 2
-sudo apt-get update && sudo apt-get upgrade -y
-sudo apt install xrdp -y
-sudo service xrdp start
-ip add
-```
+## Udemy
+- **introduction**
+  - [Linux for Beginners](https://udemy.com/course/linuxforbeginners/)
+  - [Complete Linux Training Course to Get Your Dream IT Job](https://www.udemy.com/course/complete-linux-training-course-to-get-your-dream-it-job)
+  - [Mastering Linux: The Comprehensive Guide](https://www.udemy.com/course/mastering-linux)
+- **terminal commands**
+  - [Linux Command Line Basics](https://www.udemy.com/course/linux-command-line-volume1)
+  - [Learn Linux in 5 Days and Level Up Your Career](https://thoughtworks.udemy.com/course/learn-linux-in-5-days/)
+  - [Linux Mastery: Master the Linux Command Line in 11.5 Hours](https://udemy.com/course/linux-mastery/)
+  - [The Linux Command Line Bootcamp: Beginner To Power User](https://udemy.com/course/the-linux-command-line-bootcamp/)
 
 
-#### [Ubuntu Server for ARM](https://ubuntu.com/download/server/arm)
-### Setup ubuntu server in UTM
-```
-sudo apt update && sudo apt upgrade -y
-sudo apt install ubuntu-desktop
-sudo reboot
-
-# for directory sharing between host os and guest os (127.0.0.1:9843)
-sudo apt install spice-vdagent spice-webdavd -y 
-
-# https://docs.getutm.app/guest-support/linux/
-sudo mkdir -p /media/shared
-sudo mount -t 9p -o trans=virtio share /media/shared -oversion=9p2000.L
-# You can also modify `sudo vi /etc/fstab` and add the following line to automatically mount the share on startup
-share	/media/shared	9p	trans=virtio,version=9p2000.L,rw,_netdev,nofail	0	0
-sudo chown -R $USER /media/shared
-
-```
-
-
-
-
-### Steps for creating my personalised VM in mac
-- Create the VM from ubuntu image [[linux]]
-- Add git ssh keys
-- Add vm user name host in your ~/.ssh/config
-- Setup ssh agent on vscode
-	- [Linux VMs on an M1-based Mac with VScode and UTM](https://medium.com/@lizrice/linux-vms-on-an-m1-based-mac-with-vscode-and-utm-d73e7cb06133)
-- Download and set zsh
-- Install luajit then install neovim by luajit
-
-
-
-
-
-## Resources
-
-### websites
+## websites
 - **terminal commands**
   - [terminal-mac-cheatsheet](https://github.com/0nn0/terminal-mac-cheatsheet)
   - [cheatography](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
   - [guru99](https://www.guru99.com/linux-commands-cheat-sheet.html)
   - [Keyboard shortcuts in Terminal on Mac](https://support.apple.com/en-in/guide/terminal/trmlshtcts/mac)
 
-### youtube
+## youtube
 - **origin**
   - [Why Linux Rules the Data Center](https://www.youtube.com/watch?v=xDLBpe5gbUg)
   - [Why so many distros? The Weird History of Linux](https://www.youtube.com/watch?v=ShcR4Zfc6Dw)
@@ -96,6 +50,7 @@ sudo chown -R $USER /media/shared
     - [Bash Scripting Tutorial - Linux Shell Script and Command Line for Beginners](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
   - [Linux Server Course - System Configuration and Operation](https://www.youtube.com/watch?v=WMy3OzvBWc0)
     - [How to Configure and Operate Linux Servers - Full Course](https://www.freecodecamp.org/news/linux-server-course-system-configuration-and-operation/)
+  - [Linux Device Drivers Development Course for Beginners](https://www.youtube.com/watch?v=iSiyDHobXHA)
    
 - **terminal commands**
   - [Become a shell wizard in ~12 mins](https://www.youtube.com/watch?v=IYZDIhfAUM0)
@@ -131,8 +86,6 @@ sudo chown -R $USER /media/shared
   - [Linux Crash Course](https://www.youtube.com/playlist?list=PLT98CRl2KxKHKd_tH3ssq0HPrThx2hESW)
   - [Full Guides](https://www.youtube.com/playlist?list=PLT98CRl2KxKFfumnJiR8FxBsbJepGgMoN)
   - [Top Docs | Learn the Basics](https://www.youtube.com/playlist?list=PLTnRtjQN5iebLpaJpCuuzVqXyPI_h5x_t)
-  - [Proxmox Full Course](https://www.youtube.com/playlist?list=PLT98CRl2KxKHnlbYhtABg6cF50bYa8Ulo)
-  
 
 - **others**
   - [Unix Domain Socket in 100 seconds](https://www.youtube.com/watch?v=1UHaR54i3ak)
@@ -140,10 +93,3 @@ sudo chown -R $USER /media/shared
 - **command line tools for improving productivity**
   - [5 Command Line Tools That Boost Developer Productivity (2023)](https://www.youtube.com/watch?v=6ivti-DfZng)
 
-### Udemy
-- **introduction**
-  - [Complete Linux Training Course to Get Your Dream IT Job](https://www.udemy.com/course/complete-linux-training-course-to-get-your-dream-it-job)
-  - [Mastering Linux: The Comprehensive Guide](https://www.udemy.com/course/mastering-linux)
-- **terminal commands**
-  - [Linux Command Line Basics](https://www.udemy.com/course/linux-command-line-volume1)
-  - [The Linux Command Line Bootcamp: Beginner To Power User](https://udemy.com/course/the-linux-command-line-bootcamp/)

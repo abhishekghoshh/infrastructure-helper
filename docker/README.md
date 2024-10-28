@@ -2,9 +2,8 @@
 
 ### Introductions
 - [docker cheetsheet](./cheatsheet.md)
-- [sample app](./sample)
-- [pdf]()
-    - 
+- [sample app with docker file](./sample/dockerfile)
+- [pdf](./pdf/)
 
 ## Youtube videos (docker, container runtime, containerd, kubernetes)
 - [Using docker in unusual ways](https://www.youtube.com/watch?v=zfNqp85g5JM)
