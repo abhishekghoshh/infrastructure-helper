@@ -5,6 +5,9 @@
 ## Youtube
 - [General Security Education](https://www.youtube.com/playlist?list=PLhixgUqwRTjz6VwU3uDK_Pk6F5Tl0KuoC)
 - [Computer Networking Full Course - OSI Model Deep Dive with Real Life Examples](https://www.youtube.com/watch?v=IPvYjXCsTg8)
+- [Computer Networking Course - Network Engineering - CompTIA Network+ Exam Prep](https://www.youtube.com/watch?v=qiQR5rTSshw)
+- [Computer Networks (Complete Playlist)](https://www.youtube.com/playlist?list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_)
+- [Computer Networking Tutorial - Bits and Bytes of the Networking](https://www.youtube.com/watch?v=PhjHXeMNpp8)
 - [Sunny Classroom](https://www.youtube.com/@sunnyclassroom24/playlists)
 
 
