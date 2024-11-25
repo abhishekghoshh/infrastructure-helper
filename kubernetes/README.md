@@ -1,5 +1,23 @@
 # Kubernetes
 
+## Resources
+- [introduction](./resources/introduction.md)
+- [pods](./resources/pod.md)
+- [replica set](./resources/replica-set.md)
+- [deployment](./resources/deployment.md)
+- [service](./resources/service.md)
+- [namespace](./resources/namespace.md)
+- [imperative commands](./resources/imperative-commands.md)
+- [command and args](./resources/command-and-args.md)
+- [environment-variables](./resources/environment-variables.md)
+- [security context](./resources/security-context.md)
+- [resource requirements](./resources/resource-requirements.md)
+- [taints and tolerations](./resources/taints-and-tolerations.md)
+- [node selectors and node affinity](./resources/node-selectors-and-node-affinity.md)
+- [multi-container pod](./resources/multi-container-pod.md)
+- [readiness and liveness probe](./resources/readiness-and-liveness-probe.md)
+- [container logging](./resources/container-logging.md)
+- [pod design](./resources/pod-design.md)
 
 ## Ingress and Load balancers(MetalLb)
 - **blogs**
