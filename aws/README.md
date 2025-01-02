@@ -1,5 +1,7 @@
 # AWS learning material
 
+### Resources
+- [introduction](./resources/introduction.md)
 
 #### books
 
