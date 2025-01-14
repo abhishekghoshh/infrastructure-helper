@@ -33,6 +33,6 @@
 - [Cisco BGP Masterclass for Enterprise Network Engineers](https://udemy.com/course/cisco-bgp-masterclass/) 16.5 hr
 
 
-### Advanced
+### CCNA 200-301
 - [Cisco CCNA 200-301 - The Complete Guide to Getting Certified](https://udemy.com/course/ccna-complete/) 40 hr
 - [The Complete Networking Fundamentals Course. Your CCNA start](https://udemy.com/course/complete-networking-fundamentals-course-ccna-start/) 79.5 hr
