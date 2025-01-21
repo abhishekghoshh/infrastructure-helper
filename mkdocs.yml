@@ -3,6 +3,10 @@ site_url: https://abhishekghoshh.github.io/infrastructure-helper
 
 nav:
   - Home: index.md
+  - AWS:
+    - introduction: aws/introduction.md
+    - networking: aws/networking.md
+    - slides: aws/slides.md
 
 
 theme:
@@ -35,6 +39,7 @@ theme:
 plugins:
   - social
   - search
+  - mkdocs-pdf
 
 extra:
   social:
@@ -46,6 +51,7 @@ extra:
       link: https://www.linkedin.com/in/abhishek-ghosh-220679132/
 
 markdown_extensions:
+  - attr_list
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
