@@ -61,9 +61,13 @@ These services provide insights into application performance and resource utiliz
 ## Watch this videos
 - [The only Cloud services you actually need to know](https://www.youtube.com/watch?v=gcfB8iIPtbY)
 - [AWS Networking Basics For Programmers | Hands On](https://www.youtube.com/watch?v=2doSoMN2xvI)
+- [AWS Cloud Computing Course](https://www.youtube.com/playlist?list=PL0X6fGhFFNTcU-_MCPe9dkH6sqmgfhy_M)
 
 
 ## Udemy
 - [Ultimate AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/aws-certified-cloud-practitioner-new)
-- [Full Practice Exam with Explanations included! PASS the Amazon Web Services Certified Developer Certification DVA-C02](https://udemy.com/course/aws-certified-developer-associate-dva-c01)
-- [6 Practice Exams | AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/practice-exams-aws-certified-cloud-practitioner)
+    - [6 Practice Exams | AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/practice-exams-aws-certified-cloud-practitioner/?_gl=1*1asmfb2*_ga*MTYyODg0OTc2Ni4xNzM5NTU1MzE1*_ga_6GZZTGGX7H*MTczOTU1NTMxNC4xLjEuMTczOTU1NTQ3NC4zNi4wLjA.&couponCode=FEB_25_GET_STARTED)
+- [Ultimate AWS Certified Developer Associate 2025 DVA-C02](https://udemy.com/course/aws-certified-developer-associate-dva-c01)
+    - [Practice Exams | AWS Certified Developer Associate 2024](https://www.udemy.com/course/aws-certified-developer-associate-practice-tests-dva-c01/?_gl=1*1mu0o3w*_ga*MTYyODg0OTc2Ni4xNzM5NTU1MzE1*_ga_6GZZTGGX7H*MTczOTU1NTMxNC4xLjEuMTczOTU1NTgwOS42MC4wLjA.&couponCode=FEB_25_GET_STARTED)
+- [AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/practice-exams-aws-certified-cloud-practitioner)
+    - [Practice Exams | AWS Certified Solutions Architect Associate](https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/?_gl=1*1rnmkl5*_ga*MTYyODg0OTc2Ni4xNzM5NTU1MzE1*_ga_6GZZTGGX7H*MTczOTU1NTMxNC4xLjAuMTczOTU1NTMxNC42MC4wLjA.&couponCode=FEB_25_GET_STARTED)

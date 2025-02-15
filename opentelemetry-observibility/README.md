@@ -5,6 +5,7 @@
 - [What is OpenTelemetry?](https://www.youtube.com/watch?v=ASgosEzG4Pw)
 - [OpenTelemetry](https://www.youtube.com/playlist?list=PL6VBQyIvTlRjAMeeZN5yfD07X8DdYonnI)
 - [Observability](https://www.youtube.com/playlist?list=PLyicRj904Z9-kyG_J5DAXbYhRmWUJ-Iqf)
+- [Grafana is the goat... Let's deploy the LGTM stack](https://www.youtube.com/watch?v=1X3dV3D5EJg)
 
 
 ## Medium
@@ -29,3 +30,9 @@
 
 ## Udemy
 - [Observability in Cloud Native apps using OpenTelemetry](https://thoughtworks.udemy.com/course/observability-in-cloud-native-apps-using-opentelemetry/)
+
+
+## stack
+
+### LGTM
+Loki Grafana Tempo Mimir
