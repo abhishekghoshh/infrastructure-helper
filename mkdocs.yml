@@ -3,10 +3,80 @@ site_url: https://abhishekghoshh.github.io/infrastructure-helper
 
 nav:
   - Home: index.md
+  - Operating System:
+    - introduction: os/introduction.md
+    - links: os/links.md
+    - proxmox: os/proxmox.md
+  - Computer Architecture:
+    - introduction: computer-architechture/introduction.md
+    - links: computer-architechture/links.md
+  - Networking: 
+    - introduction: networking/introduction.md
+    - links: networking/links.md
+  - Security:
+    - introduction: security/introduction.md
+    - application security: security/application-security.md
+    - certificate:
+      - introduction: security/certificate/introduction.md
+      - server-certificates: security/certificate/server-certificates.md
+      - client-certificates: security/certificate/client-certificates.md
+      - self-signed-certificates: security/certificate/self-signed-certificates.md
+      - certificate-authority: security/certificate/certificate-authority.md
+      - links: security/certificate/links.md
+    - reverse proxy:
+      - introduction: security/reverse-proxy/introduction.md
+      - nginx: security/reverse-proxy/nginx.md
+      - haproxy: security/reverse-proxy/haproxy.md
+    - devsecops: security/devsecops.md
+  - kubernetes:
+    - docker: kubernetes/docker/docker.md
+    - introduction: kubernetes/resources/introduction.md
+    - pods: kubernetes/resources/pod.md
+    - replica set: kubernetes/resources/replica-set.md
+    - deployment: kubernetes/resources/deployment.md
+    - service: kubernetes/resources/service.md
+    - namespace: kubernetes/resources/namespace.md
+    - imperative commands: kubernetes/resources/imperative-commands.md
+    - command and args: kubernetes/resources/command-and-args.md
+    - environment-variables: kubernetes/resources/environment-variables.md
+    - security context: kubernetes/resources/security-context.md
+    - resource requirements: kubernetes/resources/resource-requirements.md
+    - taints and tolerations: kubernetes/resources/taints-and-tolerations.md
+    - node selectors and node affinity: kubernetes/resources/node-selectors-and-node-affinity.md
+    - multi-container pod: kubernetes/resources/multi-container-pod.md
+    - readiness and liveness probe: kubernetes/resources/readiness-and-liveness-probe.md
+    - container logging: kubernetes/resources/container-logging.md
+    - pod design: kubernetes/resources/pod-design.md
+    - links: kubernetes/resources/links.md
+    - helm: kubernetes/helm/helm.md
   - AWS:
     - introduction: aws/introduction.md
     - networking: aws/networking.md
     - slides: aws/slides.md
+  - Jenkins:
+    - introduction: jenkins/introduction.md
+    - links: jenkins/links.md
+  - Github Actions:
+    - introduction: github-actions/introduction.md
+    - links: github-actions/links.md
+  - Infrastructure as Code:
+    - ansible: iac/ansible.md
+    - terraform: iac/terraform.md
+    - pulumni: iac/pulumni.md
+  - gitops:
+    - argo-cd: gitops/argo-cd.md
+    - flux: gitops/flux.md
+    - links: gitops/links.md
+  - OpenTelemetry and Observability:
+    - introduction: opentelemetry-observibility/introduction.md
+    - prometheus: opentelemetry-observibility/prometheus.md
+    - grafana: opentelemetry-observibility/grafana.md
+    - links: opentelemetry-observibility/links.md
+  - ELK Stack:
+    - introduction: elk-stack/introduction.md
+    - links: elk-stack/links.md
+  
+
 
 
 theme:
