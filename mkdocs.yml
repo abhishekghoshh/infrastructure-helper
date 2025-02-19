@@ -47,8 +47,14 @@ nav:
     - readiness and liveness probe: kubernetes/resources/readiness-and-liveness-probe.md
     - container logging: kubernetes/resources/container-logging.md
     - pod design: kubernetes/resources/pod-design.md
+    - ingress: kubernetes/resources/ingress.md
+    - gateway-api: kubernetes/resources/gateway-api.md
+    - kueue: kubernetes/resources/kueue.md
+    - service mesh: kubernetes/resources/service-mesh.md
     - links: kubernetes/resources/links.md
-    - helm: kubernetes/helm/helm.md
+    - helm: 
+      - introduction: kubernetes/helm/introduction.md
+      - links: kubernetes/helm/links.md
   - AWS:
     - introduction: aws/introduction.md
     - networking: aws/networking.md

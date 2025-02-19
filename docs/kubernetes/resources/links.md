@@ -1,6 +1,17 @@
 # Kubernetes
 
-## Ingress and Load balancers(MetalLb)
+## Udemy
+- [Certified Kubernetes Application Developer](https://www.udemy.com/course/certified-kubernetes-application-developer)
+
+
+## YouTube
+
+### Playlists
+- [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXmoKAmRh38U1-QEeh2dGEOX)
+- [Kubernetes Full Course](https://www.youtube.com/watch?v=YHuZ78Ig_oc&list=PLrMP04WSdCjrkNYSFvFeiHrfpsSVDFMDR)
+- [Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=Q9Z75x29Uf4&list=PL8klaCXyIuQ7DlznvhkxVfSC3Bp6vHcCN)
+
+### Ingress and Load balancers(MetalLb)
 - **blogs**
   - [Installing MetalLB Load Balancer on Kubernetes Cluster](https://computingforgeeks.com/deploy-metallb-load-balancer-on-kubernetes/)
 - **youtube**
@@ -9,7 +20,14 @@
   - [What is Kubernetes' new Gateway API](https://www.youtube.com/watch?v=OTE1X8WLg2I)
   - [Networking](https://www.youtube.com/playlist?list=PLyicRj904Z9_ZJ1SD432y-DeUYDIYqZiw)
 
-## Kubernetes Resources, CRs, CRDs, Operators
+
+### Headless and StatefulSet Service
+- [Headless Service in Kubernetes](https://www.youtube.com/watch?v=WwzeBVJHV0M)
+- [StatefulSet in Kubernetes](https://www.youtube.com/watch?v=eUa-IDPGL-Q)
+- [Kubernetes StatefulSet Tutorial](https://www.youtube.com/watch?v=nUm4Y5uEG7k)
+- [Kubernetes Deployment vs. StatefulSet vs. DaemonSet](https://www.youtube.com/watch?v=30KAInyvY_o)
+
+### Kubernetes Resources, CRs, CRDs, Operators
 - **youtube**
   - [Kubernetes Operator simply explained in 10 mins](https://www.youtube.com/watch?v=ha3LjlD6g7g)
   - [What The Heck Are Kubernetes Resources, CRs, CRDs, Operators, etc.?](https://www.youtube.com/watch?v=aM2Y9m2Kazk)
@@ -28,23 +46,31 @@
   - [Dynamic Workload Scheduler and Kueue (Get High-Demand GPUs)](https://www.youtube.com/watch?v=Q60n3Hhrqas)
 
 
+### Batch Workload
+- [Building a Batch Workload Platform on Kubernetes](https://www.youtube.com/playlist?list=PLTc8fg0trDx-WXg4__D8wLRPSH-N7NM5l)
+
+
+
 ## Blogs
-- **Medium**
-  - [13 Kubernetes Configurations You Should Know in 2024](https://overcast.blog/13-kubernetes-configurations-you-should-know-in-2024-54eec72f307e)
-  - [13 Kubernetes Tools Your Should Know in 2024](https://overcast.blog/13-kubernetes-tools-your-should-know-in-2024-4e857124c176)
-  - [17 Kubernetes Libraries You Should be Using In 2024](https://overcast.blog/17-kubernetes-libraries-you-should-be-using-in-2024-1c181f15a0aa)
-  - [Mastering Kubernetes Security — My Journey With Admission Controllers](https://itnext.io/mastering-kubernetes-security-my-journey-with-admission-controllers-ca6f163e8c2a)
-  - [11 Best Ways to Optimize Kubernetes Resources and Reduce Costs](https://overcast.blog/11-best-ways-to-optimize-kubernetes-resources-and-reduce-costs-3c342fa3b71b)
-  - [13 Kubernetes Tricks You Didn't Know](https://overcast.blog/13-kubernetes-tricks-you-didnt-know-647de6364472)
 
-
-### Others
-- **blogs**
-  - [A Practical Guide to Running NVIDIA GPUs on Kubernetes](https://www.jimangel.io/posts/nvidia-rtx-gpu-kubernetes-setup/)
-- **youtube**
-  - [Building a Batch Workload Platform on Kubernetes](https://www.youtube.com/playlist?list=PLTc8fg0trDx-WXg4__D8wLRPSH-N7NM5l)
-
-
-
-
+- [13 Kubernetes Configurations You Should Know in 2024](https://overcast.blog/13-kubernetes-configurations-you-should-know-in-2024-54eec72f307e)
+- [13 Kubernetes Tools Your Should Know in 2024](https://overcast.blog/13-kubernetes-tools-your-should-know-in-2024-4e857124c176)
+- [17 Kubernetes Libraries You Should be Using In 2024](https://overcast.blog/17-kubernetes-libraries-you-should-be-using-in-2024-1c181f15a0aa)
+- [Mastering Kubernetes Security — My Journey With Admission Controllers](https://itnext.io/mastering-kubernetes-security-my-journey-with-admission-controllers-ca6f163e8c2a)
+- [11 Best Ways to Optimize Kubernetes Resources and Reduce Costs](https://overcast.blog/11-best-ways-to-optimize-kubernetes-resources-and-reduce-costs-3c342fa3b71b)
+- [13 Kubernetes Tricks You Didn't Know](https://overcast.blog/13-kubernetes-tricks-you-didnt-know-647de6364472)
+- [A Practical Guide to Running NVIDIA GPUs on Kubernetes](https://www.jimangel.io/posts/nvidia-rtx-gpu-kubernetes-setup/)
+- [What is Kubernetes?](https://www.waytoeasylearn.com/learn/what-is-kubernetes/)
+- [Access Cluster API](https://kubernetes.io/docs/tasks/administer-cluster/access-cluster-api/)
+- [Kubernetes API Structure and Terminology](https://iximiuz.com/en/posts/kubernetes-api-structure-and-terminology/)
+- [Kubernetes Controller Manager](https://www.sobyte.net/post/2022-07/k8s-controller-manager/)
+- [Authentication in Kubernetes (Series of 4 Blogs)](https://learnk8s.io/authentication-kubernetes)
+- [Kubernetes Authentication Methods](https://goteleport.com/blog/kube-authn-methods/)
+- [Kubernetes Authentication & Authorization 101](https://levelup.gitconnected.com/kubernetes-authentication-authorization-101-stefanie-lai-15080f64bcee)
+- [Kubernetes RBAC (Role-Based Access Control)](https://www.strongdm.com/blog/kubernetes-rbac-role-based-access-control)
+- [RBAC in Kubernetes](https://learnk8s.io/rbac-kubernetes)
+- [Kubernetes RBAC Overview](https://medium.com/devops-mojo/kubernetes-role-based-access-control-rbac-overview-introduction-rbac-with-kubernetes-what-is-2004d13195df)
+- [Kubernetes Admission Controller](https://www.armosec.io/blog/kubernetes-admission-controller/)
+- [Custom Admission Controller](https://docs.giantswarm.io/advanced/custom-admission-controller/)
+- [Encrypting Secret Data at Rest in Kubernetes](https://thoughtworks.udemy.com/course/certified-kubernetes-application-developer/learn/lecture/34549240#overview)
 
