@@ -54,9 +54,11 @@ nav:
     - links: kubernetes/resources/links.md
     - helm: 
       - introduction: kubernetes/helm/introduction.md
+      - commands: kubernetes/helm/commands.md
       - links: kubernetes/helm/links.md
   - AWS:
     - introduction: aws/introduction.md
+    - iam: aws/iam.md
     - networking: aws/networking.md
     - slides: aws/slides.md
   - Jenkins:

@@ -13,4 +13,3 @@
 ## Solutions Architect
 
 ![Solutions Architect](./slides/Solutions-Architect/AWS-Certified-Solutions-Architect-Slides.pdf){ type=application/pdf style="min-height:100vh;width:100%" }
-

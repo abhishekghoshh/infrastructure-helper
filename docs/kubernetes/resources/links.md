@@ -7,47 +7,47 @@
 ## YouTube
 
 ### Playlists
-- [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXmoKAmRh38U1-QEeh2dGEOX)
-- [Kubernetes Full Course](https://www.youtube.com/watch?v=YHuZ78Ig_oc&list=PLrMP04WSdCjrkNYSFvFeiHrfpsSVDFMDR)
-- [Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=Q9Z75x29Uf4&list=PL8klaCXyIuQ7DlznvhkxVfSC3Bp6vHcCN)
+  - [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXmoKAmRh38U1-QEeh2dGEOX)
+  - [Kubernetes Full Course](https://www.youtube.com/watch?v=YHuZ78Ig_oc&list=PLrMP04WSdCjrkNYSFvFeiHrfpsSVDFMDR)
+  - [Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=Q9Z75x29Uf4&list=PL8klaCXyIuQ7DlznvhkxVfSC3Bp6vHcCN)
 
 ### Ingress and Load balancers(MetalLb)
 - **blogs**
-  - [Installing MetalLB Load Balancer on Kubernetes Cluster](https://computingforgeeks.com/deploy-metallb-load-balancer-on-kubernetes/)
+    - [Installing MetalLB Load Balancer on Kubernetes Cluster](https://computingforgeeks.com/deploy-metallb-load-balancer-on-kubernetes/)
 - **youtube**
-  - [Learn about HTTPS, TLS & Certificates](https://www.youtube.com/playlist?list=PLShDm2AZYnK3cWZpOjV7nOpL7plH2Ztz0)
-  - [MetalLB and NGINX Ingress // Setup External Access for Kubernetes Applications](https://www.youtube.com/watch?v=k8bxtsWe9qw)
-  - [What is Kubernetes' new Gateway API](https://www.youtube.com/watch?v=OTE1X8WLg2I)
-  - [Networking](https://www.youtube.com/playlist?list=PLyicRj904Z9_ZJ1SD432y-DeUYDIYqZiw)
+    - [Learn about HTTPS, TLS & Certificates](https://www.youtube.com/playlist?list=PLShDm2AZYnK3cWZpOjV7nOpL7plH2Ztz0)
+    - [MetalLB and NGINX Ingress // Setup External Access for Kubernetes Applications](https://www.youtube.com/watch?v=k8bxtsWe9qw)
+    - [What is Kubernetes' new Gateway API](https://www.youtube.com/watch?v=OTE1X8WLg2I)
+    - [Networking](https://www.youtube.com/playlist?list=PLyicRj904Z9_ZJ1SD432y-DeUYDIYqZiw)
 
 
 ### Headless and StatefulSet Service
-- [Headless Service in Kubernetes](https://www.youtube.com/watch?v=WwzeBVJHV0M)
-- [StatefulSet in Kubernetes](https://www.youtube.com/watch?v=eUa-IDPGL-Q)
-- [Kubernetes StatefulSet Tutorial](https://www.youtube.com/watch?v=nUm4Y5uEG7k)
-- [Kubernetes Deployment vs. StatefulSet vs. DaemonSet](https://www.youtube.com/watch?v=30KAInyvY_o)
+  - [Headless Service in Kubernetes](https://www.youtube.com/watch?v=WwzeBVJHV0M)
+  - [StatefulSet in Kubernetes](https://www.youtube.com/watch?v=eUa-IDPGL-Q)
+  - [Kubernetes StatefulSet Tutorial](https://www.youtube.com/watch?v=nUm4Y5uEG7k)
+  - [Kubernetes Deployment vs. StatefulSet vs. DaemonSet](https://www.youtube.com/watch?v=30KAInyvY_o)
 
 ### Kubernetes Resources, CRs, CRDs, Operators
 - **youtube**
-  - [Kubernetes Operator simply explained in 10 mins](https://www.youtube.com/watch?v=ha3LjlD6g7g)
-  - [What The Heck Are Kubernetes Resources, CRs, CRDs, Operators, etc.?](https://www.youtube.com/watch?v=aM2Y9m2Kazk)
+    - [Kubernetes Operator simply explained in 10 mins](https://www.youtube.com/watch?v=ha3LjlD6g7g)
+    - [What The Heck Are Kubernetes Resources, CRs, CRDs, Operators, etc.?](https://www.youtube.com/watch?v=aM2Y9m2Kazk)
 
 ### Kueue
 - **blogs**
-  - [Introducing Kueue](https://kubernetes.io/blog/2022/10/04/introducing-kueue/)
-  - [Kueue cohort](https://kueue.sigs.k8s.io/docs/concepts/cluster_queue/#cohort)
-  - [visibility API](https://kueue.sigs.k8s.io/docs/tasks/manage/monitor_pending_workloads/pending_workloads_on_demand/#monitor-pending-workloads-on-demand)
-  - [Prometheus Metrics](https://kueue.sigs.k8s.io/docs/reference/metrics/)
-  - [Deploy a batch system using Kueue](https://cloud.google.com/kubernetes-engine/docs/tutorials/kueue-intro)
+    - [Introducing Kueue](https://kubernetes.io/blog/2022/10/04/introducing-kueue/)
+    - [Kueue cohort](https://kueue.sigs.k8s.io/docs/concepts/cluster_queue/#cohort)
+    - [visibility API](https://kueue.sigs.k8s.io/docs/tasks/manage/monitor_pending_workloads/pending_workloads_on_demand/#monitor-pending-workloads-on-demand)
+    - [Prometheus Metrics](https://kueue.sigs.k8s.io/docs/reference/metrics/)
+    - [Deploy a batch system using Kueue](https://cloud.google.com/kubernetes-engine/docs/tutorials/kueue-intro)
 - **youtube**
-  - [Intro to Kueue](https://www.youtube.com/watch?v=HWTNCTaKZ_o)
-  - [Kueue: A Kubernetes-native Job Queueing - Abdullah Gharaibeh, Google](https://www.youtube.com/watch?v=YwSZUdU3iRY)
-  - [Resource Orchestration of HPC on Kubernetes: Where We Are Now and... Swati Sehgal & Francesco Romani](https://www.youtube.com/watch?v=KA80KnFaYRU)
-  - [Dynamic Workload Scheduler and Kueue (Get High-Demand GPUs)](https://www.youtube.com/watch?v=Q60n3Hhrqas)
+    - [Intro to Kueue](https://www.youtube.com/watch?v=HWTNCTaKZ_o)
+    - [Kueue: A Kubernetes-native Job Queueing - Abdullah Gharaibeh, Google](https://www.youtube.com/watch?v=YwSZUdU3iRY)
+    - [Resource Orchestration of HPC on Kubernetes: Where We Are Now and... Swati Sehgal & Francesco Romani](https://www.youtube.com/watch?v=KA80KnFaYRU)
+    - [Dynamic Workload Scheduler and Kueue (Get High-Demand GPUs)](https://www.youtube.com/watch?v=Q60n3Hhrqas)
 
 
 ### Batch Workload
-- [Building a Batch Workload Platform on Kubernetes](https://www.youtube.com/playlist?list=PLTc8fg0trDx-WXg4__D8wLRPSH-N7NM5l)
+  - [Building a Batch Workload Platform on Kubernetes](https://www.youtube.com/playlist?list=PLTc8fg0trDx-WXg4__D8wLRPSH-N7NM5l)
 
 
 
