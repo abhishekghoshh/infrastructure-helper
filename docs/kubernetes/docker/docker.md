@@ -24,6 +24,11 @@
 docker login
 ```
 
+**create a directory with all docker related things**
+```sh
+docker init
+```
+
 **Pull either from local repository or remote image repository and run it:**
 ```sh
 docker run ngnix
@@ -277,42 +282,96 @@ Before docker we have hypervisor.
 - Portability 
 
 ### Sample docker files
+
 **Single stage not optimized dockerfile:**
+
+This Dockerfile is a simple example of building a Docker image in a single stage. It is not optimized for size or build efficiency.
+
 ```sh
+# Use the official OpenJDK 11 runtime as the base image
 FROM openjdk:11-jre-slim
+
+# Define a build argument JAR_FILE with a default value of target/*.jar
 ARG JAR_FILE=target/*.jar
+
+# Copy the JAR file from the host to the container
 COPY ${JAR_FILE} app.jar
+
+# Expose port 8080 to the outside world
 EXPOSE 8080
+
+# Define the command to run the application
 ENTRYPOINT ["java","-jar","-Xms256m", "-Xmx512m","/app.jar"]
 ```
 
+**Explanation:**
+- `FROM openjdk:11-jre-slim`: This line specifies the base image to use, which is the official OpenJDK 11 runtime.
+- `ARG JAR_FILE=target/*.jar`: This line defines a build argument named `JAR_FILE` with a default value of `target/*.jar`.
+- `COPY ${JAR_FILE} app.jar`: This line copies the JAR file from the host machine to the container, renaming it to `app.jar`.
+- `EXPOSE 8080`: This line exposes port 8080, allowing the application to be accessible on this port.
+- `ENTRYPOINT ["java","-jar","-Xms256m", "-Xmx512m","/app.jar"]`: This line defines the command to run the application, specifying the Java runtime options and the path to the JAR file.
+
 **Multi stage optimized dockerfile:**
+
+This Dockerfile is an example of building a Docker image using multiple stages. It is optimized for size and build efficiency by separating the build and runtime stages.
+
 ```sh
 # ===========   BUILD STAGE =====================
+# Use the official Maven image to build the application
 FROM maven AS build
+
+# Set the working directory inside the container
 WORKDIR /workspace/app
 
-# build maven .m2 cache as layer for reuse
+# Copy the pom.xml file and download the project dependencies
 COPY pom.xml pom.xml
 RUN mvn dependency:go-offline -B
 
-# build application as fat executable JAR
+# Copy the source code and build the application
 COPY src src
 RUN mvn package -DskipTests
-# explod fat executable JAR for COPY in RUN stage
+
+# Extract the built JAR file for the runtime stage
 RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
 
 # =========== RUN STAGE =====================
-#FROM openjdk:alpine
+# Use the official OpenJDK 11 runtime as the base image
 FROM openjdk:11-jre-slim
+
+# Create a volume for temporary files
 VOLUME /tmp
+
+# Define a build argument for the dependency directory
 ARG DEPENDENCY=/workspace/app/target/dependency
+
+# Copy the extracted JAR files from the build stage
 COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
 COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
+
+# Expose port 8080 to the outside world
 EXPOSE 8080
+
+# Define the command to run the application
 ENTRYPOINT ["java","-cp","app:app/lib/*","com.github.typicalitguy.DigitalLayerApplication"]
 ```
+
+**Explanation:**
+- `FROM maven AS build`: This line specifies the base image for the build stage, which is the official Maven image.
+- `WORKDIR /workspace/app`: This line sets the working directory inside the container.
+- `COPY pom.xml pom.xml`: This line copies the `pom.xml` file to the container.
+- `RUN mvn dependency:go-offline -B`: This line downloads the project dependencies.
+- `COPY src src`: This line copies the source code to the container.
+- `RUN mvn package -DskipTests`: This line builds the application, skipping the tests.
+- `RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)`: This line extracts the built JAR file for the runtime stage.
+- `FROM openjdk:11-jre-slim`: This line specifies the base image for the runtime stage, which is the official OpenJDK 11 runtime.
+- `VOLUME /tmp`: This line creates a volume for temporary files.
+- `ARG DEPENDENCY=/workspace/app/target/dependency`: This line defines a build argument for the dependency directory.
+- `COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib`: This line copies the extracted JAR files from the build stage.
+- `COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF`: This line copies the extracted JAR files from the build stage.
+- `COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app`: This line copies the extracted JAR files from the build stage.
+- `EXPOSE 8080`: This line exposes port 8080, allowing the application to be accessible on this port.
+- `ENTRYPOINT ["java","-cp","app:app/lib/*","com.github.typicalitguy.DigitalLayerApplication"]`: This line defines the command to run the application, specifying the Java runtime options and the path to the application classes.
 
 **Maven has a shortcut to build spring boot image:**
 ```xml
@@ -396,12 +455,103 @@ docker run --link redis:redis --link db:db worker-app
 docker-compose up --build with docker-compose.yml
 ```
 
+**Sample docker-compose file**
+
+```yaml
+version: '3'
+
+services:
+  app:
+    container_name: app
+    image: chat-app:latest
+    build:
+      context: .  # Set the build context to the current directory
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/home/workspace/chat-app  # Mounts the local directory to /home/workspace/chat-app in the container
+    depends_on:
+      - mongodb
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - backend
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - frontend
+	depends_on:
+      - app
+
+networks:
+  frontend:
+  backend:
+
+volumes:
+  mongo-data:
+```
+
+**Explanation:**
+- `version: '3'`: Specifies the version of the Docker Compose file format.
+- `services`: Defines the services that make up the application.
+  - `app`: The main application service.
+    - `container_name`: Sets the name of the container.
+    - `image`: Specifies the image to use.
+    - `build`: Defines the build context.
+    - `ports`: Maps the container port to the host port.
+    - `volumes`: Mounts the local directory to the container directory.
+    - `depends_on`: Specifies the dependencies for this service.
+    - `healthcheck`: Defines the health check configuration.
+  - `mongodb`: The MongoDB service.
+    - `image`: Specifies the image to use.
+    - `container_name`: Sets the name of the container.
+    - `ports`: Maps the container port to the host port.
+    - `volumes`: Mounts the volume to the container directory.
+    - `networks`: Specifies the network for this service.
+  - `nginx`: The Nginx service.
+    - `image`: Specifies the image to use.
+    - `container_name`: Sets the name of the container.
+    - `ports`: Maps the container port to the host port.
+    - `volumes`: Mounts the local configuration file to the container directory.
+    - `networks`: Specifies the network for this service.
+- `networks`: Defines the networks for the services.
+  - `frontend`: The frontend network.
+  - `backend`: The backend network.
+- `volumes`: Defines the volumes for the services.
+  - `mongo-data`: The volume for MongoDB data.
+
+**Quick overview of an image**
+```sh
+docker scout quickview
+```
+> For more go to the [reference](https://www.docker.com/resources/scout-cheat-sheet/)
+
+
+
 ## Links
 
 
 ### Youtube videos (docker, container runtime, containerd, kubernetes)
 - [Using docker in unusual ways](https://www.youtube.com/watch?v=zfNqp85g5JM)
 - [100+ Docker Concepts you Need to Know](https://www.youtube.com/watch?v=rIrNIzy6U_g)
+- [The Only Docker Tutorial You Need To Get Started](https://www.youtube.com/watch?v=DQdB7wFEygo)
 - [you need to learn Docker RIGHT NOW!!](https://www.youtube.com/watch?v=eGz9DS-aIeY)
 - [Docker networking is CRAZY!!](https://www.youtube.com/watch?v=bKFMS5C4CG0)
 - [Understanding Docker Architecture](https://www.youtube.com/watch?v=4Qv1tb1bm1Q)
@@ -420,8 +570,8 @@ docker-compose up --build with docker-compose.yml
 
 ### Blogs
 - **Medium blogs**
-  - [Dockerfile cheat sheet](https://medium.com/@anjkeesari/dockerfile-cheat-sheet-1cb9e6eb1484)
-  - [6 Tips to Optimize Your Dockerfile](https://aws.plainenglish.io/6-tips-to-optimize-your-dockerfile-40359a73ef8c)
-  - [4 Docker Options You May Not Know](https://medium.com/syntaxerrorpub/4-docker-options-you-may-not-know-fef301a5ce03)
-  - [Docker Basic Interview Questions — How Many Can You Answer?](https://blog.devgenius.io/docker-interview-questions-how-many-can-you-answer-173437bb8d35)
-  - [DevOps in K8s — Write Dockerfile Efficiently](https://blog.devgenius.io/devops-in-k8s-write-dockerfile-efficiently-37eaedf87163)
+    - [Dockerfile cheat sheet](https://medium.com/@anjkeesari/dockerfile-cheat-sheet-1cb9e6eb1484)
+    - [6 Tips to Optimize Your Dockerfile](https://aws.plainenglish.io/6-tips-to-optimize-your-dockerfile-40359a73ef8c)
+    - [4 Docker Options You May Not Know](https://medium.com/syntaxerrorpub/4-docker-options-you-may-not-know-fef301a5ce03)
+    - [Docker Basic Interview Questions — How Many Can You Answer?](https://blog.devgenius.io/docker-interview-questions-how-many-can-you-answer-173437bb8d35)
+    - [DevOps in K8s — Write Dockerfile Efficiently](https://blog.devgenius.io/devops-in-k8s-write-dockerfile-efficiently-37eaedf87163)

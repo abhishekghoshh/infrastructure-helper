@@ -1,9 +1,164 @@
-## Official documentation
 
-- [Hands-on Tutorials](https://aws.amazon.com/getting-started/hands-on)
-- [Welcome to AWS Documentation](https://docs.aws.amazon.com/)
+## Fundamentals of AWS Cloud Computing
 
+This video explains the basics of AWS cloud computing and how different AWS services are used together to build real-world applications. The video is divided into 6 key parts:
 
+### 1. Static Content Hosting & Delivery
+
+*   **S3 (Simple Storage Service):**
+    *   S3 is the storage location for all website files, including images, HTML, JavaScript, and CSS.
+    *   It is highly reliable and can handle files of any size.
+    *   S3 organizes files into buckets, which act as root folders for websites.
+*   **CloudFront:**
+    *   CloudFront is AWS's Content Delivery Network (CDN).
+    *   It copies website files to data centers globally (Edge locations) for fast user access, regardless of location.
+    *   CloudFront enhances security with features like signed URLs and cookies for content access control.
+    *   It integrates with AWS WAF (Web Application Firewall) to protect websites from cyber attacks.
+*   **Route 53:**
+    *   Route 53 is AWS's DNS service.
+    *   It translates website domain names into IP addresses.
+    *   It directs users to the nearest or fastest server location.
+    *   It can split traffic for testing new website versions.
+
+### 2. Backend Services / Compute Layer
+
+*   **Serverless with API Gateway & Lambda:**
+    *   API Gateway receives requests and routes them to appropriate Lambda functions.
+    *   Lambda functions execute code in response to triggers.
+    *   Lambda is serverless, meaning AWS manages the underlying servers.
+    *   Serverless is ideal for unpredictable workloads and specific tasks.
+    *   It scales automatically and charges only for compute time used.
+*   **EC2 (Elastic Cloud Compute):**
+    *   EC2 provides virtual servers in AWS data centers.
+    *   It offers complete control over the server environment, including OS, software, and security.
+    *   EC2 is scalable, allowing users to adjust server capacity as needed.
+    *   It suits applications needing specific configurations or legacy software.
+*   **Containers with ECS (Elastic Container Service):**
+    *   ECS manages containers, which package applications and their dependencies.
+    *   Containers ensure consistent performance across different environments.
+    *   ECS is ideal for microservices architectures.
+    *   It allows independent scaling and updates of application components.
+    *   It balances serverless and EC2, offering more control than Lambda but less management than EC2.
+*   **Elastic Kubernetes Service (EKS):**
+    *   Managed service for running Kubernetes on AWS without needing to install and operate your own Kubernetes control plane.
+*   **AWS Fargate:**
+    *   Serverless compute engine for containers, allowing users to run containers without managing servers.
+*   **Lightsail:**
+    *   Easiest way to get started with AWS for small-scale applications, offering virtual servers, storage, and networking.
+*   **Batch:**
+    *   Fully managed service for running batch computing workloads of any scale.
+
+### 3. Data Storage & Management
+
+*   **S3 (Object Storage):**
+    *   S3 is object storage, suitable for files like images, videos, and documents.
+    *   Files are stored as complete objects and accessed via URLs.
+    *   It is best for infrequently modified, complete files.
+*   **RDS (Relational Database Service):**
+    *   RDS is for traditional SQL databases.
+    *   It automatically manages tasks like backups, security, and scaling.
+    *   It is suitable for structured data with clear relationships.
+    *   Example: e-commerce applications managing orders, customers, and products.
+*   **DynamoDB (NoSQL Database):**
+    *   DynamoDB is a NoSQL database designed for speed and scalability.
+    *   It handles large data volumes with millisecond responses.
+    *   It is flexible and best for data that doesn't fit into tables or needs fast access.
+    *   Example: tracking delivery driver locations.
+*   **EBS (Elastic Block Store):**
+    *   Provides persistent block storage volumes for use with Amazon EC2 instances.
+*   **EFS (Elastic File System):**
+    *   Provides scalable file storage for use with Amazon EC2.
+*   **Glacier:**
+    *   Secure, durable, and extremely low-cost cloud storage service for data archiving and long-term backup.
+
+### 4. AI and Machine Learning
+
+*   **Amazon Bedrock:**
+    *   Bedrock offers pre-built AI models.
+    *   It allows easy integration of advanced AI capabilities without building models from scratch.
+    *   Useful for quickly adding chatbots or other AI features.
+    *   Offers customization and security.
+*   **Amazon SageMaker:**
+    *   SageMaker is a comprehensive platform for building, training, and deploying custom machine learning models.
+    *   It is ideal for complex tasks like predicting user behavior or fraud detection.
+    *   Offers full control over AI development.
+
+### 5. Security
+
+*   **VPC (Virtual Private Cloud):**
+    *   VPC is a private network within AWS.
+    *   It allows control over network configurations, subnets, and internet access.
+    *   It uses public subnets for internet-facing resources.
+    *   It uses private subnets for internal resources.
+    *   NAT Gateways provide secure internet access from private subnets.
+*   **IAM (Identity and Access Management):**
+    *   IAM controls access to AWS resources.
+    *   It ensures users and services have only necessary permissions.
+    *   It enables granular permission settings for services like Lambda and EC2.
+    *   Crucial for securing AI and machine learning workloads.
+*   **Security Tools:**
+    *   AWS provides additional security services.
+    *   GuardDuty for threat detection.
+    *   KMS for encryption key management.
+    *   AWS Shield and WAF for cyber attack protection.
+*   **Secrets Manager:**
+    *   Protects access to applications, services, and IT resources without the upfront investment and on-going maintenance costs of operating your own infrastructure.
+*   **AWS CDK (Cloud Development Kit):**
+    *   Open-source software development framework to define your cloud application resources using familiar programming languages.
+*   **Config:**
+    *   Provides AWS resource inventory, configuration history, and configuration change notifications to enable security and governance.
+
+### 6. Monitoring and Auditing
+
+*   **CloudWatch:**
+    *   CloudWatch monitors AWS services and applications.
+    *   It collects performance metrics, logs, and events.
+    *   It provides dashboards and alerts for real-time insights into application performance.
+    *   It can automate responses to issues.
+*   **CloudTrail:**
+    *   CloudTrail records API calls within the AWS account.
+    *   It logs all changes made to the AWS environment.
+    *   Essential for auditing and security.
+    *   Tracks who made changes, when, and what was changed.
+    *   Especially important in AI and machine learning for tracking model performance and access.
+*   **X-Ray:**
+    *   Helps developers analyze and debug production, distributed applications, such as those built using a microservices architecture.
+
+### Networking Services
+
+Networking services facilitate communication between resources and manage traffic.
+
+*   **VPC (Virtual Private Cloud):**
+    *   A VPC is a virtual private cloud that isolates your resources from other resources in the AWS cloud. It allows you to launch AWS resources into a virtual network that you've defined.
+*   **Subnets:**
+    *   A subnet is a range of IP addresses within a VPC. You can create public and private subnets. Public subnets have access to the internet, while private subnets do not.
+*   **Security Group:**
+    *   A security group acts as a virtual firewall that controls the traffic to and from your EC2 instances. You can specify rules to allow or deny traffic based on IP addresses, protocols, and ports.
+*   **Internet Gateway:**
+    *   An internet gateway connects your VPC to the internet. It allows communication between instances in your VPC and the internet.
+*   **Route Table:**
+    *   A route table determines how traffic flows within a VPC. You can create custom route tables for your subnets to control the routing of traffic.
+*   **NAT Gateway:**
+    *   A NAT Gateway in AWS is a managed Network Address Translation service that allows instances in private subnets to access the internet while preventing external services from initiating connections to those instances.
+*   **NACL (Network ACL):**
+    *   A Network ACL is a virtual firewall that controls traffic to and from your subnets. It provides an additional layer of security at the subnet level.
+*   **Load Balancer:**
+    *   A load balancer distributes incoming application traffic across multiple targets, such as EC2 instances, to ensure high availability and reliability.
+*   **Direct Connect:**
+    *   Direct Connect provides a dedicated network connection from your premises to AWS. It allows you to establish a private connection between AWS and your data center, office, or colocation environment.
+*   **Transit Gateway:**
+    *   Transit Gateway enables customers to connect their VPCs and their on-premises networks to a single gateway. It simplifies network architecture and reduces the complexity of managing multiple connections.
+
+### Messaging Services
+
+These services enable communication between distributed systems or components.
+
+*   **SQS (Simple Queue Service):**
+    *   SQS is a fully managed message queuing service that enables decoupling of microservices, distributed systems, and serverless applications. It allows you to send, store, and receive messages between software components.
+*   **SNS (Simple Notification Service):**
+    *   SNS is a managed messaging service for sending notifications from the cloud to subscribers or other applications. It supports multiple messaging protocols, including HTTP/HTTPS, email, SMS, and AWS Lambda.
+*   **MQ:**
+    *   MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate message brokers in the cloud. It enables communication between distributed applications and microservices.
 
 ## AWS projects for learning
 
@@ -28,82 +183,3 @@
 - **Resources**: [AWS S3](https://aws.amazon.com/s3/), [Textract](https://aws.amazon.com/textract/), [SageMaker](https://aws.amazon.com/sagemaker/), [OpenSearch](https://aws.amazon.com/opensearch-service/), [DynamoDB](https://aws.amazon.com/dynamodb/), [MLOps](https://aws.amazon.com/mlops/)
 
 
-
-## Aws core services
-
-### Compute Services
-These services provide the necessary resources for running applications and workloads in the cloud.
-
-   - **AWS IAM**: Identity and Access Management service that allows you to manage user access and permissions securely.
-   - **EC2 (Elastic Compute Cloud)**: Provides resizable compute capacity in the cloud, allowing users to run virtual servers.
-   - **Elastic Kubernetes Service (EKS)**: Managed service for running Kubernetes on AWS without needing to install and operate your own Kubernetes control plane.
-   - **Elastic Container Service (ECS)**: A highly scalable container orchestration service that supports Docker containers.
-   - **AWS Fargate**: Serverless compute engine for containers, allowing users to run containers without managing servers.
-   - **AWS Lambda**: Serverless computing service that runs code in response to events, automatically managing the compute resources.
-   - **Lightsail**: Easiest way to get started with AWS for small-scale applications, offering virtual servers, storage, and networking.
-   - **Batch**: Fully managed service for running batch computing workloads of any scale.
-
-### Storage Services
-These services are designed for storing data in various formats.
-
-   - **S3 (Simple Storage Service)**: Object storage service that offers scalability, data availability, security, and performance.
-   - **RDS (Relational Database Service)**: Managed relational database service supporting various database engines like MySQL, PostgreSQL, and Oracle.
-   - **DynamoDB**: Fully managed NoSQL database service that provides fast and predictable performance with seamless scalability.
-   - **EBS (Elastic Block Store)**: Provides persistent block storage volumes for use with Amazon EC2 instances.
-   - **EFS (Elastic File System)**: Provides scalable file storage for use with Amazon EC2.
-   - **Glacier**: Secure, durable, and extremely low-cost cloud storage service for data archiving and long-term backup.
-
-### Networking Services
-Networking services facilitate communication between resources and manage traffic.
-
-   - **VPC**: A VPC is a virtual private cloud that isolates your resources from other resources in the AWS cloud.
-   - **Subnets**: A subnet is a range of IP addresses within a VPC. You can create public and private subnets. Public subnets have access to the internet, while private subnets do not.
-   - **Security group**: A security group is a virtual firewall that controls traffic to and from your EC2 instances.
-   - **Internet Gateway**: A gateway connects your VPC to other networks. There are different types of gateways, such as internet gateways and NAT gateways.
-   - **Route Table**: A route table determines how traffic flows within a VPC. You can create custom route tables for your subnets.
-   - **NAT Gateway**: A NAT Gateway in AWS is a managed Network Address Translation service that allows instances in private subnets to access the internet while preventing external services from initiating connections to those instances.
-   - **NACL**: An NACL is a virtual firewall that controls traffic to and from your subnets.
-   - **Load Balancer**: Distributes incoming application traffic across multiple targets, such as EC2 instances.
-   - **Route 53**: Scalable Domain Name System (DNS) web service designed to route end users to Internet applications.
-   - **Amazon CloudFront**: Content Delivery Network (CDN) that securely delivers data, videos, applications, and APIs with low latency.
-   - **API Gateway**: Managed service for creating, publishing, maintaining, monitoring, and securing APIs at any scale.
-   - **Direct Connect**: Provides a dedicated network connection from your premises to AWS.
-   - **Transit Gateway**: Enables customers to connect their VPCs and their on-premises networks to a single gateway.
-
-### Messaging Services
-These services enable communication between distributed systems or components.
-
-   - **SQS (Simple Queue Service)**: Fully managed message queuing service that enables decoupling of microservices, distributed systems, and serverless applications.
-   - **SNS (Simple Notification Service)**: Managed messaging service for sending notifications from the cloud to subscribers or other applications.
-   - **MQ**: Managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate message brokers in the cloud.
-
-### Security & Management Services
-Services focused on governance, security, and resource management.
-
-   - **Secrets Manager**: Protects access to applications, services, and IT resources without the upfront investment and on-going maintenance costs of operating your own infrastructure.
-   - **AWS CDK (Cloud Development Kit)**: Open-source software development framework to define your cloud application resources using familiar programming languages.
-   - **CloudTrail**: Enables governance, compliance, and operational and risk auditing of your AWS account.
-   - **Config**: Provides AWS resource inventory, configuration history, and configuration change notifications to enable security and governance.
-
-### Monitoring & Observability Services
-These services provide insights into application performance and resource utilization.
-
-   - **CloudWatch**: Monitoring service for AWS cloud resources and applications that provides data and actionable insights to monitor applications.
-   - **X-Ray**: Helps developers analyze and debug production, distributed applications, such as those built using a microservices architecture.
-   - **CloudTrail**: Enables governance, compliance, and operational and risk auditing of your AWS account.
-
-
-
-## Watch this videos
-- [The only Cloud services you actually need to know](https://www.youtube.com/watch?v=gcfB8iIPtbY)
-- [AWS Networking Basics For Programmers | Hands On](https://www.youtube.com/watch?v=2doSoMN2xvI)
-- [AWS Cloud Computing Course](https://www.youtube.com/playlist?list=PL0X6fGhFFNTcU-_MCPe9dkH6sqmgfhy_M)
-
-
-## Udemy
-- [Ultimate AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/aws-certified-cloud-practitioner-new)
-    - [6 Practice Exams | AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/practice-exams-aws-certified-cloud-practitioner/?_gl=1*1asmfb2*_ga*MTYyODg0OTc2Ni4xNzM5NTU1MzE1*_ga_6GZZTGGX7H*MTczOTU1NTMxNC4xLjEuMTczOTU1NTQ3NC4zNi4wLjA.&couponCode=FEB_25_GET_STARTED)
-- [Ultimate AWS Certified Developer Associate 2025 DVA-C02](https://udemy.com/course/aws-certified-developer-associate-dva-c01)
-    - [Practice Exams | AWS Certified Developer Associate 2024](https://www.udemy.com/course/aws-certified-developer-associate-practice-tests-dva-c01/?_gl=1*1mu0o3w*_ga*MTYyODg0OTc2Ni4xNzM5NTU1MzE1*_ga_6GZZTGGX7H*MTczOTU1NTMxNC4xLjEuMTczOTU1NTgwOS42MC4wLjA.&couponCode=FEB_25_GET_STARTED)
-- [AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/practice-exams-aws-certified-cloud-practitioner)
-    - [Practice Exams | AWS Certified Solutions Architect Associate](https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/?_gl=1*1rnmkl5*_ga*MTYyODg0OTc2Ni4xNzM5NTU1MzE1*_ga_6GZZTGGX7H*MTczOTU1NTMxNC4xLjAuMTczOTU1NTMxNC42MC4wLjA.&couponCode=FEB_25_GET_STARTED)

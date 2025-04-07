@@ -58,6 +58,7 @@ nav:
       - links: kubernetes/helm/links.md
   - AWS:
     - introduction: aws/introduction.md
+    - links: aws/links.md
     - iam: aws/iam.md
     - networking: aws/networking.md
     - slides: aws/slides.md
@@ -71,14 +72,15 @@ nav:
     - ansible: iac/ansible.md
     - terraform: iac/terraform.md
     - pulumni: iac/pulumni.md
+  - terraform:
+    - introduction: terraform/introduction.md
+    - links: terraform/links.md
   - gitops:
     - argo-cd: gitops/argo-cd.md
     - flux: gitops/flux.md
     - links: gitops/links.md
   - OpenTelemetry and Observability:
     - introduction: opentelemetry-observibility/introduction.md
-    - prometheus: opentelemetry-observibility/prometheus.md
-    - grafana: opentelemetry-observibility/grafana.md
     - links: opentelemetry-observibility/links.md
   - ELK Stack:
     - introduction: elk-stack/introduction.md

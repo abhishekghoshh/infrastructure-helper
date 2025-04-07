@@ -8,21 +8,26 @@ Helm is a tool that simplifies the deployment and management of applications on 
 - **Helm Client:**
     * The Helm client is a command-line interface (CLI) for end users that can be installed on any system.
     * It is responsible for local chart development, managing repositories and releases, interfacing with the Helm library, sending charts to be installed, and requesting upgrades or uninstallations.
+
 - **Charts:**
     * Charts are Helm's package format.
     * A chart is a bundle of information necessary to create an instance of a Kubernetes application.
     * Charts contain YAML files with metadata and templates that are rendered into Kubernetes manifest files.
     * The `Chart.yaml` file defines the application metadata, such as name, version, and dependencies.
+
 - **Repositories:**
     * Repositories are storage locations where Helm charts are stored and shared.
     * They allow teams to share charts of various applications.
+
 - **Releases:**
     * A release is a running instance of a chart, combined with a specific configuration.
     * It represents a chart deployed into an environment, and Helm manages multiple versions of releases across different environments, including installations, upgrades, and rollbacks.
+
 - **Helm Library:**
     * The Helm library provides the logic for executing Helm operations.
     * It interfaces with the Kubernetes API server to combine a chart and configuration to build a release.
     * It installs charts, and manages upgrades and uninstallations.
+
 - **Revision History and Rollbacks:**
     * Helm maintains a history of all releases, allowing users to roll back to previous versions if needed.
     * Each upgrade or installation creates a new revision.
@@ -31,11 +36,17 @@ Helm is a tool that simplifies the deployment and management of applications on 
 ## Why Should We Use Helm?
 
 - **Simplicity:** Helm simplifies the deployment and management of Kubernetes applications by providing a single command to deploy complex applications. This reduces the learning curve and makes it easier for teams to manage their applications.
+
 - **Revision History:** Helm maintains a history of all releases, allowing easy rollbacks to previous versions. This is particularly useful for recovering from failed deployments or reverting to a known good state.
+
 - **Dynamic Configuration:** Helm supports dynamic configuration through values files, enabling users to customize their deployments without modifying the underlying charts. This allows for flexible and reusable configurations.
+
 - **Consistency:** Helm ensures consistent deployments across environments by using pre-configured charts. This reduces the risk of human error and ensures that applications are deployed in a predictable manner.
+
 - **Intelligent Deployments:** Helm manages the order in which resources are created, ensuring that dependencies are resolved correctly. This prevents issues that can arise from resources being created in the wrong order.
+
 - **Lifecycle Hooks:** Helm supports lifecycle hooks, allowing users to execute custom actions at different points during the deployment process. This can be used to perform tasks such as database migrations or configuration updates.
+
 - **Security:** Helm allows downloading secured charts from central repositories, ensuring that only trusted and verified charts are used. This enhances the security of the deployment process.
 
 ## Helm Templating Engine
@@ -68,3 +79,25 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
 {% endraw %}
 ```
+
+## Workflow of Helm
+
+1. **Load the Chart and its Dependencies:**
+    * Helm fetches the chart from the local directory or a remote repository.
+    * It also fetches any dependencies specified in the `Chart.yaml` file.
+
+2. **Parse the values.yaml:**
+    * Helm reads the `values.yaml` file to get the configuration values.
+    * These values can be overridden by passing custom values during the `helm install` or `helm upgrade` commands.
+
+3. **Generate the YAML:**
+    * Helm uses the templating engine to combine the chart templates with the values from `values.yaml`.
+    * This generates the final Kubernetes manifest files.
+
+4. **Parse the YAML to Kubernetes Objects and Validate:**
+    * Helm parses the generated YAML files into Kubernetes objects.
+    * It validates these objects to ensure they are correctly formatted and can be accepted by the Kubernetes API server.
+
+5. **Generate YAML and Send to Kubernetes:**
+    * Helm sends the validated Kubernetes objects to the Kubernetes API server.
+    * The API server processes these objects and creates the corresponding resources in the cluster.
