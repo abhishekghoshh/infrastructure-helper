@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: myapp-mongodb-sts
+  namespace: myapp-ns
+  labels:
+    app: myapp-mongodb
+spec:
+  selector:
+    matchLabels:
+      app: mongodb
+  serviceName: mongodb
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: myapp-mongodb
+    spec:
+      containers:
+      - name: myapp-mongodb
+        image: mongo
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 27017
+          name: mongodb
+        volumeMounts:
+        - name: myapp-mongo-volume
+          mountPath: /var/lib/mongodb
+      volumes:
+        - name: myapp-mongo-volume
+          persistentVolumeClaim:
+            claimName: myapp-mongo-pvc
