@@ -1,0 +1,28 @@
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: myapp-sc
+provisioner: kubernetes.io/aws-ebs
+reclaimPolicy: Retain
+volumeBindingMode: WaitForFirstConsumer
+parameters:
+  type: io1
+  iopsPerGB: "10"
+  fsType: ext4
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-1
+spec:
+  selector:
+    matchLabels:
+      app: backend
+  storageClassName: myapp-sc
+  resources:
+    requests:
+      storage: 1Mi
+  accessModes:
+    - ReadWriteMany
+---
