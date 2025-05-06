@@ -1,5 +1,12 @@
 # Gateway API
 
+## Youtube
+- [Mastering Kubernetes: Service and Network APIs (Service, Ingress, GatewayAPI)](https://www.youtube.com/watch?v=-1H0BeN9hIk)
+- [GATEWAY API - Ingress is DEAD! Long live Ingress](https://www.youtube.com/watch?v=5D4Eh5XBLxU)
+- [Gateway API Explained: The Future of Kubernetes Networking](https://www.youtube.com/watch?v=xaZ87iSvMAI)
+
+
+
 ## Refferences
 - [From kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/gateway/)
 - [Gateway API documentation](https://gateway-api.sigs.k8s.io/)

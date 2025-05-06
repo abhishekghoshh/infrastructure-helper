@@ -238,7 +238,7 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-west-2"
+  region  = "ap-south-1"
 }
 
 resource "aws_instance" "app_server" {
@@ -266,12 +266,27 @@ Initialize the configuration directory. This step downloads the necessary provid
 terraform init
 ```
 
+
+```sh
+terraform fmt
+```
+
+```sh
+terraform plan
+
+## We can additionally give variable value
+terraform plan -var-file="dev.tfvars"
+```
+
 ### Apply configuration
 
 Apply the configuration to create your instance.
 
 ```sh
 terraform apply
+
+## We can additionally give variable value
+terraform apply -var-file="dev.tfvars"
 ```
 
 When prompted to confirm, type `yes` and press ENTER.
@@ -290,8 +305,25 @@ Destroy the instance to avoid ongoing charges.
 
 ```sh
 terraform destroy
+
+## We can additionally give variable value
+terraform destroy -var-file="dev.tfvars"
+
+## 
+terraform destroy --auto-approve -var-file="dev.tfvars"
 ```
 
 When prompted to confirm, type `yes` and press ENTER.
 
 
+
+
+
+
+## Content
+
+- [ec2](./manifests/ec2/)
+- [variables](./manifests/variables/)
+- [networking 001](./manifests/networking-001/)
+- [networking 002](./manifests/networking-002/)
+- [networking 003](./manifests/networking-003/)

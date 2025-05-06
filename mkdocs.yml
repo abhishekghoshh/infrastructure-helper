@@ -3,6 +3,27 @@ site_url: https://abhishekghoshh.github.io/infrastructure-helper
 
 nav:
   - Home: index.md
+  - git:
+    - introduction: git/introduction.md
+    - configurations: git/configurations.md
+    - cloning: git/cloning.md
+    - initialization: git/intialization.md
+    - modifying files: git/modifying_files.md
+    - project status: git/project_status.md
+    - logs: git/logs.md
+    - commits: git/commits.md
+    - branching: git/branching.md
+    - pull and synchronize: git/pull_and_synchronize.md
+    - push: git/push.md
+    - rebase: git/rebase.md
+    - tagging: git/tagging.md
+    - advanced: git/advanced.md
+    - links: git/links.md
+  - linux:
+    - introduction: linux/introduction.md
+    - commands: linux/commands.md
+    - others: linux/others.md
+    - links: linux/links.md
   - Operating System:
     - introduction: os/introduction.md
     - links: os/links.md
@@ -80,8 +101,8 @@ nav:
     - flux: gitops/flux.md
     - links: gitops/links.md
   - OpenTelemetry and Observability:
-    - introduction: opentelemetry-observibility/introduction.md
-    - links: opentelemetry-observibility/links.md
+    - introduction: observibility/introduction.md
+    - links: observibility/links.md
   - ELK Stack:
     - introduction: elk-stack/introduction.md
     - links: elk-stack/links.md
@@ -92,15 +113,24 @@ nav:
 theme:
   name: material
   features:
-    - navigation.tabs
     - navigation.sections
-    - toc.integrate
+    - navigation.tabs
+    - navigation.tabs.sticky 
     - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.expand
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - toc:
+        permalink: true
+        title: On this page
+    - toc.integrate
+    # - toc.follow
   language: en
   palette:
     - scheme: default

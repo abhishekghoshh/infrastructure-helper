@@ -47,6 +47,13 @@
 - **LGTM**: Loki, Grafana, Tempo, Mimir
 
 
+
+## Blogs
+
+- [Golang, OpenTelemetry, Jaeger, ElasticSearch and Kubernetes setup for application traces](https://www.inanzzz.com/index.php/post/x5a2/golang-opentelemetry-jaeger-elasticsearch-and-kubernetes-setup-for-application-traces)
+- [Everything You Should Know About OpenTelemetry Collector Contrib](https://last9.io/blog/opentelemetry-collector-contrib/)
+
+
 ## Medium
 - [The Observability in Distributed Systems](https://marcospereirajr.com.br/the-observability-in-distributed-systems-d11e893e10f7)
 - [Observability with OpenTelemetry and Go](https://marcospereirajr.com.br/observability-with-open-telemetry-and-golang-8ae2d9e994af)

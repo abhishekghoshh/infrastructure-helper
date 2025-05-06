@@ -2,12 +2,21 @@
 
 ## Udemy
 - [Certified Kubernetes Application Developer](https://www.udemy.com/course/certified-kubernetes-application-developer)
+- [Certified Kubernetes Administrator (CKA) with Practice Tests](https://udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
 
 
 ## YouTube
 
+### Single videos
+- [What is Kubernetes | Kubernetes explained in 15 mins](https://www.youtube.com/watch?v=VnvRFRk_51k)
+- [Kubernetes Explained in 15 Minutes | Hands On (2024 Edition)](https://www.youtube.com/watch?v=r2zuL9MW6wc)
+- [Do NOT Learn Kubernetes Without Knowing These Concepts...](https://www.youtube.com/watch?v=wXuSqFJVNQA)
+- [Why is Kubernetes Popular | What is Kubernetes?](https://www.youtube.com/watch?v=lv0DdVLZuHc)
+
+
 ### Playlists
   - [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXmoKAmRh38U1-QEeh2dGEOX)
+  - [Kubernetes Tutorial](https://www.youtube.com/playlist?list=PLyicRj904Z99pBOBXCCBosUuc1nU2CO10)
   - [Kubernetes Full Course](https://www.youtube.com/watch?v=YHuZ78Ig_oc&list=PLrMP04WSdCjrkNYSFvFeiHrfpsSVDFMDR)
   - [Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=Q9Z75x29Uf4&list=PL8klaCXyIuQ7DlznvhkxVfSC3Bp6vHcCN)
 
