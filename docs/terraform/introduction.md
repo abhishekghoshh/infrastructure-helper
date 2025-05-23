@@ -289,6 +289,11 @@ terraform apply
 terraform apply -var-file="dev.tfvars"
 ```
 
+
+```bash
+terraform show
+```
+
 When prompted to confirm, type `yes` and press ENTER.
 
 ### Verify the instance

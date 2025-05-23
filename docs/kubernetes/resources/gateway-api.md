@@ -8,10 +8,36 @@
 
 
 ## Refferences
+- [Getting started with Gateway API](https://gateway-api.sigs.k8s.io/guides/)
+- [Envoy Gateway](https://gateway.envoyproxy.io/docs/tasks/quickstart/)
 - [From kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/gateway/)
 - [Gateway API documentation](https://gateway-api.sigs.k8s.io/)
 - [From google cloud](https://cloud.google.com/kubernetes-engine/docs/concepts/gateway-api)
 - [Gateway API v1.2: WebSockets, Timeouts, Retries, and More](https://kubernetes.io/blog/2024/11/21/gateway-api-v1-2/)
+
+
+
+## Medium
+
+- [Gateway API vs Ingress in Kubernetes: A Deep Dive with Architecture Diagrams-Part1](https://medium.com/@shahebazsayed07/gateway-api-vs-ingress-in-kubernetes-a-deep-dive-with-architecture-diagrams-part1-9e6c88086c21)
+
+
+
+
+## Installation
+
+```bash
+kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/latest/download/standard-install.yaml
+
+kubectl apply -f https://github.com/envoyproxy/gateway-api/releases/latest/download/envoy-gateway.yaml
+```
+
+
+
+
+
+
+
 
 ## Premise
 

@@ -564,8 +564,11 @@ docker scout quickview
 - [What is a Container Runtime?](https://www.youtube.com/watch?v=DB0BH5N-gDY)
 - [Containerd - An open and reliable container runtime (CNCFMinutes 18)](https://www.youtube.com/watch?v=AP630LvIs0o)
 - [Docker vs Containerd: Understanding the Differences and Choosing the Right Containerization Tool](https://www.youtube.com/watch?v=21onkZfL2yM)
+
 - [Podman vs. Docker](https://www.youtube.com/watch?v=Xx588nbshlM)
 - [you should be using PODMAN](https://www.youtube.com/watch?v=0jhdCcAc8nM)
+- [Docker vs Podman Explained](https://www.youtube.com/watch?v=YRLDaYnAZUQ)
+
 - [Effortless Docker Management with LazyDocker: A Terminal UI for Containers, Images and Networks!](https://www.youtube.com/watch?v=G955-w-BIQQ)
 
 ### Blogs

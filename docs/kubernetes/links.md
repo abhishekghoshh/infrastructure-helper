@@ -12,13 +12,17 @@
 - [Kubernetes Explained in 15 Minutes | Hands On (2024 Edition)](https://www.youtube.com/watch?v=r2zuL9MW6wc)
 - [Do NOT Learn Kubernetes Without Knowing These Concepts...](https://www.youtube.com/watch?v=wXuSqFJVNQA)
 - [Why is Kubernetes Popular | What is Kubernetes?](https://www.youtube.com/watch?v=lv0DdVLZuHc)
+- [Kubernetes Architecture: Deep Dive](https://www.youtube.com/watch?v=gjk82Y2vyro)
+- [Kubernetes Tutorial with Microservices and Cloud | Kubernetes Course](https://www.youtube.com/watch?v=EY3uDfBG0OY)
 
 
 ### Playlists
-  - [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXmoKAmRh38U1-QEeh2dGEOX)
-  - [Kubernetes Tutorial](https://www.youtube.com/playlist?list=PLyicRj904Z99pBOBXCCBosUuc1nU2CO10)
-  - [Kubernetes Full Course](https://www.youtube.com/watch?v=YHuZ78Ig_oc&list=PLrMP04WSdCjrkNYSFvFeiHrfpsSVDFMDR)
-  - [Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=Q9Z75x29Uf4&list=PL8klaCXyIuQ7DlznvhkxVfSC3Bp6vHcCN)
+- [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnHmccp2xlBENZ1xr4FpjXF)
+- [AWS EKS Kubernetes Tutorial [Full Course]](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l)
+- [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXmoKAmRh38U1-QEeh2dGEOX)
+- [Kubernetes Tutorial](https://www.youtube.com/playlist?list=PLyicRj904Z99pBOBXCCBosUuc1nU2CO10)
+- [Kubernetes Full Course](https://www.youtube.com/watch?v=YHuZ78Ig_oc&list=PLrMP04WSdCjrkNYSFvFeiHrfpsSVDFMDR)
+- [Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=Q9Z75x29Uf4&list=PL8klaCXyIuQ7DlznvhkxVfSC3Bp6vHcCN)
 
 ### Ingress and Load balancers(MetalLb)
 - **blogs**

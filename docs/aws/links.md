@@ -23,15 +23,23 @@
 - [The only Cloud services you actually need to know](https://www.youtube.com/watch?v=gcfB8iIPtbY)
 - [AWS Cloud Engineer Full Course for Beginners](https://www.youtube.com/watch?v=j_StCjwpfmk)
 - [AWS Networking Basics For Programmers | Hands On](https://www.youtube.com/watch?v=2doSoMN2xvI)
+- [Terraform AWS VPC Tutorial - Public, Private, and Isolated Subnets](https://www.youtube.com/watch?v=TQ_V9TYoRvw)
+- [AWS EKS Kubernetes Tutorial [Full Course]](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l)
+
+
+## Youtube playlists
+
 - [AWS Zero to Hero - AWS Simplified](https://www.youtube.com/playlist?list=PLdpzxOOAlwvLNOxX0RfndiYSt1Le9azze)
+    - [iam-veeramalla/aws-devops-zero-to-hero](https://github.com/iam-veeramalla/aws-devops-zero-to-hero)
 - [AWS Cloud Computing Course](https://www.youtube.com/playlist?list=PL0X6fGhFFNTcU-_MCPe9dkH6sqmgfhy_M)
+
 
 
 ## Udemy
 
 - [Ultimate AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/aws-certified-cloud-practitioner-new)
-    - [6 Practice Exams | AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/practice-exams-aws-certified-cloud-practitioner/?_gl=1*1asmfb2*_ga*MTYyODg0OTc2Ni4xNzM5NTU1MzE1*_ga_6GZZTGGX7H*MTczOTU1NTMxNC4xLjEuMTczOTU1NTQ3NC4zNi4wLjA.&couponCode=FEB_25_GET_STARTED)
+    - [6 Practice Exams | AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/practice-exams-aws-certified-cloud-practitioner)
 - [Ultimate AWS Certified Developer Associate 2025 DVA-C02](https://udemy.com/course/aws-certified-developer-associate-dva-c01)
-    - [Practice Exams | AWS Certified Developer Associate 2024](https://www.udemy.com/course/aws-certified-developer-associate-practice-tests-dva-c01/?_gl=1*1mu0o3w*_ga*MTYyODg0OTc2Ni4xNzM5NTU1MzE1*_ga_6GZZTGGX7H*MTczOTU1NTMxNC4xLjEuMTczOTU1NTgwOS42MC4wLjA.&couponCode=FEB_25_GET_STARTED)
+    - [Practice Exams | AWS Certified Developer Associate 2024](https://www.udemy.com/course/aws-certified-developer-associate-practice-tests-dva-c01)
 - [AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/practice-exams-aws-certified-cloud-practitioner)
-    - [Practice Exams | AWS Certified Solutions Architect Associate](https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/?_gl=1*1rnmkl5*_ga*MTYyODg0OTc2Ni4xNzM5NTU1MzE1*_ga_6GZZTGGX7H*MTczOTU1NTMxNC4xLjAuMTczOTU1NTMxNC42MC4wLjA.&couponCode=FEB_25_GET_STARTED)
+    - [Practice Exams | AWS Certified Solutions Architect Associate](https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate)
