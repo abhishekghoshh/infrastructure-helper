@@ -1,0 +1,183 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    buildUrl: http://jenkins.jenkins.svc.cluster.local/job/build-dotfiles-image/5/
+    kubernetes.jenkins.io/last-refresh: "1748062554856"
+    runUrl: job/build-dotfiles-image/5/
+  creationTimestamp: "2025-05-24T04:55:37Z"
+  labels:
+    agents: jenkins
+    jenkins/label: build-dotfiles-image_5-7g7x4
+    jenkins/label-digest: 89bd7b89d6ae0d84aa1cd216c17a61cfc3d8cda7
+    kubernetes.jenkins.io/controller: http___jenkins_jenkins_svc_cluster_localx
+  name: build-dotfiles-image-5-7g7x4-w710z-mjwv7
+  namespace: jenkins
+  resourceVersion: "281630"
+  uid: bd09a5ca-3f48-4ead-bebd-439415eb6d24
+spec:
+  containers:
+  - command:
+    - cat
+    image: docker:latest
+    imagePullPolicy: Always
+    name: docker
+    resources: {}
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    tty: true
+    volumeMounts:
+    - mountPath: /var/run/docker.sock
+      name: docker-sock
+    - mountPath: /home/jenkins/agent
+      name: workspace-volume
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-qv28c
+      readOnly: true
+  - env:
+    - name: JENKINS_SECRET
+      value: 0904d11bb5f09067e1e66267fc0a482d5acd16ec41d7df950339a143693ae3db
+    - name: JENKINS_AGENT_NAME
+      value: build-dotfiles-image-5-7g7x4-w710z-mjwv7
+    - name: REMOTING_OPTS
+      value: -noReconnectAfter 1d
+    - name: JENKINS_NAME
+      value: build-dotfiles-image-5-7g7x4-w710z-mjwv7
+    - name: JENKINS_AGENT_WORKDIR
+      value: /home/jenkins/agent
+    - name: JENKINS_URL
+      value: http://jenkins.jenkins.svc.cluster.local/
+    image: jenkins/inbound-agent:3309.v27b_9314fd1a_4-1
+    imagePullPolicy: IfNotPresent
+    name: jnlp
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /home/jenkins/agent
+      name: workspace-volume
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-qv28c
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: minikube
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Never
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - hostPath:
+      path: /var/run/docker.sock
+      type: ""
+    name: docker-sock
+  - emptyDir: {}
+    name: workspace-volume
+  - name: kube-api-access-qv28c
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-05-24T04:55:41Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2025-05-24T04:55:37Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-05-24T04:55:41Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-05-24T04:55:41Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-05-24T04:55:37Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://a8b5734e17f7563e71e66ece49ba8fbc87f79b32e68c50623e2caaa98788a8aa
+    image: docker:latest
+    imageID: docker-pullable://docker@sha256:eceba5b0fc2fcf83a74c298391c2ed9e1adbdaf04ee173611bd6282ec973e7ba
+    lastState: {}
+    name: docker
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-05-24T04:55:41Z"
+    volumeMounts:
+    - mountPath: /var/run/docker.sock
+      name: docker-sock
+    - mountPath: /home/jenkins/agent
+      name: workspace-volume
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-qv28c
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: docker://40066697a23dd10ea8e234205f8339d2a3112c02897a0218044cb2ed42d843c5
+    image: jenkins/inbound-agent:3309.v27b_9314fd1a_4-1
+    imageID: docker-pullable://jenkins/inbound-agent@sha256:ddc895c95fd978dbaca4400df9c22c006c9af159831a98e1164062b342b52721
+    lastState: {}
+    name: jnlp
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-05-24T04:55:41Z"
+    volumeMounts:
+    - mountPath: /home/jenkins/agent
+      name: workspace-volume
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-qv28c
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 192.168.49.2
+  hostIPs:
+  - ip: 192.168.49.2
+  phase: Running
+  podIP: 10.244.0.39
+  podIPs:
+  - ip: 10.244.0.39
+  qosClass: Burstable
+  startTime: "2025-05-24T04:55:37Z"

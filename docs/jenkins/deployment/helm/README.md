@@ -31,13 +31,11 @@ helm/
 
 This setup is inspired by:
 
-> 🔗 [Dynamic Jenkins Agents with Kubernetes](https://jsarvabhowma1.medium.com/dynamic-jenkins-agents-with-kubernetes-8f9010120ba7)
-
-> 🔗 [Blue-Green Deployment of Node.js App Using Jenkins and Istio on Minikube](https://medium.com/@shahebazsayed07/blue-green-deployment-of-node-js-app-using-jenkins-and-istio-on-minikube-kubernetes-cluster-a4925ca6cf73)
-
-> [How-to-Use-Kubernetes-Pods-As-Jenkins-Agents.md](https://gist.github.com/darinpope/67c297b3ccc04c17991b22e1422df45a)
-
----
+- [Dynamic Jenkins Agents with Kubernetes](https://jsarvabhowma1.medium.com/dynamic-jenkins-agents-with-kubernetes-8f9010120ba7)
+- [Blue-Green Deployment of Node.js App Using Jenkins and Istio on Minikube](https://medium.com/@shahebazsayed07/blue-green-deployment-of-node-js-app-using-jenkins-and-istio-on-minikube-kubernetes-cluster-a4925ca6cf73)
+- [How to Use Kubernetes Pods As Jenkins Agents](https://www.youtube.com/watch?v=ZXaorni-icg)
+    - [How-to-Use-Kubernetes-Pods-As-Jenkins-Agents.md](https://gist.github.com/darinpope/67c297b3ccc04c17991b22e1422df45a)
+- [How to Push a Docker Image to Docker Hub Using Jenkins](https://www.youtube.com/watch?v=alQQ84M4CYU)
 
 ## 🛠️ Prerequisites
 
@@ -90,3 +88,11 @@ kubectl exec -n jenkins -it deploy/jenkins -- cat /var/jenkins_home/secrets/init
 
 
 ## How to install harbor in helm and push OCI image in harbor
+```sh
+helm upgrade --install harbor harbor/harbor \
+  --namespace harbor \
+  --create-namespace \
+  -f harbor-values.yaml
+
+helm uninstall harbor -n harbor
+```
