@@ -1,0 +1,76 @@
+---
+# apiVersion: gateway.networking.k8s.io/v1
+# kind: GatewayClass
+# metadata:
+#   name: default-gateway-class
+#   namespace: default
+# spec:
+#   controllerName: gateway.nginx.org/nginx-gateway-controller  # Make sure the ingress-nginx controller is installed in your cluster
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: desktop-gateway
+  namespace: default
+spec:
+  gatewayClassName: nginx
+  listeners:
+    - name: http
+      protocol: HTTP
+      port: 80
+      allowedRoutes:
+        namespaces:
+          from: All  # This will allow routes from all namespaces, you can restrict it if needed
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: game-mario
+  labels:
+    app: game-mario
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: game-mario
+  template:
+    metadata:
+      labels:
+        app: game-mario
+    spec:
+      containers:
+        - name: game-mario
+          image: pengbai/docker-supermario
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: game-service
+spec:
+  selector:
+    app: game-mario
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: desktop-http-route
+  namespace: default  # Ensure the namespace is specified here
+spec:
+  parentRefs:
+    - name: desktop-gateway
+      namespace: default  # Ensure the correct namespace here as well
+  hostnames: ["localhost"]
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: game-service
+          port: 8080
