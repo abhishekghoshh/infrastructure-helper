@@ -1,0 +1,30 @@
+expose:
+  type: ingress
+  tls:
+    enabled: true
+  ingress:
+    hosts:
+      core: harbor.local
+      notary: notary.harbor.local
+    controller: default
+
+externalURL: http://harbor.local
+
+persistence:
+  enabled: true
+  persistentVolumeClaim:
+    registry:
+      size: 10Gi
+    jobservice:
+      size: 1Gi
+    database:
+      size: 5Gi
+    redis:
+      size: 1Gi
+    trivy:
+      size: 5Gi
+
+  resourcePolicy: "keep"
+  storageClass: "standard"       # empty string means use default storage class
+
+harborAdminPassword: "Harbor12345"  # CHANGE this!

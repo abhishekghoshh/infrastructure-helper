@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-dev
+  labels:
+    type: dev-echo-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      type: dev-echo-server
+  template:
+    metadata:
+      labels:
+        type: dev-echo-server
+    spec:
+      containers:
+      - name: echo-dev
+        image: abhishek1009/echo:latest
+        ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-dev-service
+spec:
+  selector:
+    type: dev-echo-server
+  ports:
+  - port: 8000
+    targetPort: 8000
