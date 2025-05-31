@@ -29,6 +29,9 @@ helm/
 
 ## 📘 Reference
 
+> We can also use the official helm chart https://github.com/jenkinsci/helm-charts
+
+
 This setup is inspired by:
 
 - [Dynamic Jenkins Agents with Kubernetes](https://jsarvabhowma1.medium.com/dynamic-jenkins-agents-with-kubernetes-8f9010120ba7)
