@@ -10,10 +10,10 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
 metadata:
-  name: desktop-gateway
+  name: test-gateway
   namespace: default
 spec:
-  gatewayClassName: nginx
+  gatewayClassName: nginx # check k get gatewayclasses.gateway.networking.k8s.io -n nginx-gateway # to find the correct class name
   listeners:
     - name: http
       protocol: HTTP
@@ -21,6 +21,25 @@ spec:
       allowedRoutes:
         namespaces:
           from: All  # This will allow routes from all namespaces, you can restrict it if needed
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: mario-http-route
+  namespace: default  # Ensure the namespace is specified here
+spec:
+  parentRefs:
+    - name: test-gateway
+      namespace: default  # Ensure the correct namespace here as well
+  hostnames: ["mario.local"]  # This should match your Ingress hostname
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: game-service
+          port: 8080
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -43,6 +62,13 @@ spec:
           image: pengbai/docker-supermario
           ports:
             - containerPort: 8080
+          resources:
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+            requests:
+              cpu: "1"
+              memory: "1Gi"
 ---
 apiVersion: v1
 kind: Service
@@ -56,21 +82,3 @@ spec:
       port: 8080
       targetPort: 8080
 ---
-apiVersion: gateway.networking.k8s.io/v1
-kind: HTTPRoute
-metadata:
-  name: desktop-http-route
-  namespace: default  # Ensure the namespace is specified here
-spec:
-  parentRefs:
-    - name: desktop-gateway
-      namespace: default  # Ensure the correct namespace here as well
-  hostnames: ["localhost"]
-  rules:
-    - matches:
-        - path:
-            type: PathPrefix
-            value: /
-      backendRefs:
-        - name: game-service
-          port: 8080

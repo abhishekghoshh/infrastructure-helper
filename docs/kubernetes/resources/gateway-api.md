@@ -1,5 +1,11 @@
 # Gateway API
 
+## Medium
+- [Gateway API vs Ingress in Kubernetes: A Deep Dive with Architecture Diagrams-Part1](https://medium.com/@shahebazsayed07/gateway-api-vs-ingress-in-kubernetes-a-deep-dive-with-architecture-diagrams-part1-9e6c88086c21)
+- [Why do I need an API Gateway on a Kubernetes cluster](https://medium.com/@martin.hodges/why-do-i-need-an-api-gateway-on-a-kubernetes-cluster-c70f15da836c)
+
+
+
 ## Youtube
 - [Mastering Kubernetes: Service and Network APIs (Service, Ingress, GatewayAPI)](https://www.youtube.com/watch?v=-1H0BeN9hIk)
 - [GATEWAY API - Ingress is DEAD! Long live Ingress](https://www.youtube.com/watch?v=5D4Eh5XBLxU)
@@ -8,33 +14,41 @@
 
 
 ## Refferences
-- [Getting started with Gateway API](https://gateway-api.sigs.k8s.io/guides/)
-- [Envoy Gateway](https://gateway.envoyproxy.io/docs/tasks/quickstart/)
-- [From kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/gateway/)
 - [Gateway API documentation](https://gateway-api.sigs.k8s.io/)
+- [From kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/gateway/)
 - [From google cloud](https://cloud.google.com/kubernetes-engine/docs/concepts/gateway-api)
 - [Gateway API v1.2: WebSockets, Timeouts, Retries, and More](https://kubernetes.io/blog/2024/11/21/gateway-api-v1-2/)
 
 
-
-## Medium
-
-- [Gateway API vs Ingress in Kubernetes: A Deep Dive with Architecture Diagrams-Part1](https://medium.com/@shahebazsayed07/gateway-api-vs-ingress-in-kubernetes-a-deep-dive-with-architecture-diagrams-part1-9e6c88086c21)
-
+## Implementations
+- [Implementations](https://gateway-api.sigs.k8s.io/implementations/)
+- [Envoy Gateway](https://gateway.envoyproxy.io/docs/tasks/quickstart/)
+- [nginx](https://docs.nginx.com/nginx-gateway-fabric/installation/installing-ngf/manifests/)
 
 
 
 ## Installation
 
 ```bash
+# Use nginx instead of envoy, as it is giving me error
+# but later check the issue
+# Use minikube tunnel for exposing the service because in a minikube setup we don't have loadbalancer like Metallb
+
+# Gateway API related CRDs
 kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/latest/download/standard-install.yaml
 
-kubectl apply -f https://github.com/envoyproxy/gateway-api/releases/latest/download/envoy-gateway.yaml
+# Deploy the NGINX Gateway Fabric CRDs
+kubectl apply -f https://raw.githubusercontent.com/nginx/nginx-gateway-fabric/v1.6.2/deploy/crds.yaml
+
+# Deploy NGINX Gateway Fabric
+kubectl apply -f https://raw.githubusercontent.com/nginx/nginx-gateway-fabric/v1.6.2/deploy/default/deploy.yaml
+
+# Verify the Deployment
+kubectl get pods -n nginx-gateway
+
+# Use minikube tunnel to expose and add the hostname into your /etc/hosts
+minukube tunnel
 ```
-
-
-
-
 
 
 
@@ -78,327 +92,10 @@ The following design goals drive the concepts of Gateway API. These demonstrate 
 
 **Gateway** - A Gateway describes how traffic can be translated within a cluster. As is evident from the name, it acts as a gateway between traffic outside the cluster and traffic within the cluster.
 
-**Route Resources** - Route resources define protocol-specific rules for mapping requests from a Gateway to Kubernetes Services. Route resources included in the API currently are:
-
+**Route Resources** define protocol-specific rules for mapping requests from a Gateway to Kubernetes Services. Route resources included in the API currently are:
 - **HTTPRoute** - Used for multiplexing HTTP or terminated HTTPS connections.
 - **GRPCRoute** - Used for idiomatically routing gRPC traffic.
 - **TLSRoute (experimental)** - Used for multiplexing TLS connections, discriminated via SNI.
 - **TCPRoute and UDPRoute (experimental)** - used for mapping one or more TCP or UDP ports to a single backend. These may be used to terminate TLS, where appropriate.
 
 ![Gateway Resource model](../assets/gateway-resource-model.png)
-
-## Examples
-
-The example snippets below illustrate the differences between the YAML manifests used to create Ingress API and Gateway API resources. Both examples create traffic routes to the same Service resource.
-
-Installation of an Ingress Controller and Gateway Controller are outside the scope of this document.
-
-### Ingress API
-
-The following snippets applied in order will create an IngressClass resource which will then be referenced by the Ingress resource created next.
-
-IngressClass
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: IngressClass
-metadata:
-  labels:
-    app.kubernetes.io/component: controller
-    app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
-    app.kubernetes.io/version: 1.12.0-beta.0
-  name: nginx
-spec:
-  controller: k8s.io/ingress-nginx
-```
-
-Ingress
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: science-portal-ingress
-  namespace: skaha-system
-  annotations:
-    spec.ingressClassName: nginx
-spec:
-  ingressClassName: nginx
-  rules:
-  - host: canfar.e4r.internal
-    http:
-      paths:
-      - path: /science-portal
-        pathType: Prefix
-        backend:
-          service:
-            name: science-portal-tomcat-svc
-            port:
-              number: 8080
-```
-
-### Gateway API
-
-The following snippets applied in order will first create a GatewayClass resource, which will then be referenced by a Gateway resource created next. Finally, the Gateway resource will be referenced by an HTTPRoute resource which will be created at the last step.
-
-GatewayClass
-```yaml
-apiVersion: gateway.networking.k8s.io/v1
-kind: GatewayClass
-metadata:
-  name: envoy-gateway-class
-spec:
-  controllerName: gateway.envoyproxy.io/gatewayclass-controller
-```
-
-Gateway
-```yaml
-apiVersion: gateway.networking.k8s.io/v1
-kind: Gateway
-metadata:
-  name: envoy-canfar-gateway
-spec:
-  gatewayClassName: envoy-gateway-class
-  listeners:
-  - name: canfar-gateway-http-envoy
-    protocol: HTTP
-    port: 80
-    allowedRoutes:
-      namespaces:
-        from: All
-  - name: canfar-gateway-https-envoy
-    protocol: HTTPS
-    port: 443
-    allowedRoutes:
-      namespaces:
-        from: All
-    hostname: "canfar.e4r.internal"
-    tls:
-      certificateRefs:
-      - kind: Secret
-        group: ""
-        name: canfar-gateway-tls
-```
-
-HTTPRoute
-```yaml
-apiVersion: gateway.networking.k8s.io/v1
-kind: HTTPRoute
-metadata:
-  name: envoy-canfar-gateway-httproutes
-  namespace: skaha-system
-spec:
-  hostnames:
-  - "canfar.e4r.internal"
-  parentRefs:
-  - name: envoy-canfar-gateway
-    namespace: default
-  rules:
-  - backendRefs:
-    - name: science-portal-tomcat-svc
-      port: 8080
-    matches:
-    - path:
-        type: PathPrefix
-        value: /science-portal
-```
-
-### Example for Canfar deployment using Gateway API
-
-The following snippet is an example to deploy Canfar using Gateway API.
-
-Canfar Deployment using Gateway API
-```yaml
-# STEP 1: Create a GatewayClass with a Gateway Controller of your choice.
-# A GatewayClass helps to define a set of Gateway resources that use the same controller.
-# This example uses the Envoy Gateway Controller. The controller name has to be set appropriately for other Gateway Controllers.
- 
-apiVersion: gateway.networking.k8s.io/v1
-kind: GatewayClass
-metadata:
-  name: envoy-gateway-class
-spec:
-  controllerName: gateway.envoyproxy.io/gatewayclass-controller
-  # The controllerName refers to the controller that will be using to manage Gateways of this class
- 
----
-# STEP 2: Create a Gateway for Canfar and attach the GatewayClass created in STEP 1.
-# A Gateway helps to expose services and linked to a specific GatewayClass.
- 
-apiVersion: gateway.networking.k8s.io/v1
-kind: Gateway
-metadata:
-  name: envoy-canfar-gateway
-spec:
-  gatewayClassName: envoy-gateway-class
-  # The Gateway is associated with the GatewayClass created earlier.
-  listeners:
-  - name: canfar-gateway-http-envoy
-    protocol: HTTP
-    port: 80
-    allowedRoutes:
-      namespaces:
-        from: All
-    # This listener will accept HTTP traffic on port 80 from any namespace.
-  - name: canfar-gateway-https-envoy
-    protocol: HTTPS
-    port: 443
-    allowedRoutes:
-      namespaces:
-        from: All
-    # This listener will accept HTTPS traffic on port 443 from any namespace.
-    hostname: "canfar.e4r.internal"
-    # Define a hostname for the gateway.
-    tls:
-      certificateRefs:
-        - kind: Secret
-          group: ""
-          name: canfar-gateway-tls
-        # The TLS configuration references a Secret containing the TLS certificate.
- 
----
-# STEP 3: Create an HTTPRoute for services in Canfar and attach it to the Gateway created in STEP 2.
-# HTTPRoute defines routing rules based on HTTP paths, which direct traffic to backend services.
- 
-apiVersion: gateway.networking.k8s.io/v1
-kind: HTTPRoute
-metadata:
-  name: envoy-canfar-gateway-httproutes
-  namespace: skaha-system
-spec:
-  hostnames:
-    - "canfar.e4r.internal"
-    # HTTPRoute applies to traffic matching this hostname.
-  parentRefs:
-    - name: envoy-canfar-gateway
-      namespace: default
-    # This HTTPRoute is attached to the 'envoy-canfar-gateway' Gateway defined earlier.
-  rules:
-    # Define routing rules for various paths
-    - backendRefs:
-        - name: gms
-          port: 8080
-      matches:
-        - path:
-            type: PathPrefix
-            value: /gms
-    - backendRefs:
-        - name: reg
-          port: 8080
-      matches:
-        - path:
-            type: PathPrefix
-            value: /reg
-    - backendRefs:
-        - name: science-portal-tomcat-svc
-          port: 8080
-      matches:
-        - path:
-            type: PathPrefix
-            value: /science-portal
-    - backendRefs:
-        - name: skaha-tomcat-svc
-          port: 8080
-      matches:
-        - path:
-            type: PathPrefix
-            value: /skaha
- 
----
-# STEP 4: Create a Gateway for Harbor and attach the GatewayClass created in STEP 1.
-# A second Gateway exposing Harbor services, similar to the Canfar Gateway.
- 
-apiVersion: gateway.networking.k8s.io/v1
-kind: Gateway
-metadata:
-  name: envoy-harbor-gateway
-spec:
-  gatewayClassName: envoy-gateway-class
-  # The same GatewayClass is used for Harbor.
-  listeners:
-  - name: harbor-gateway-http-envoy
-    protocol: HTTP
-    port: 80
-    allowedRoutes:
-      namespaces:
-        from: All
-    # This listener will accept HTTP traffic on port 80 from any namespace.
- 
-  - name: harbor-gateway-https-envoy
-    protocol: HTTPS
-    port: 443
-    allowedRoutes:
-      namespaces:
-        from: All
-    # This listener will accept HTTPS traffic on port 443 from any namespace.
-    hostname: "harbor.e4r.internal"
-    # Define a hostname for the Harbor gateway.
-    tls:
-      certificateRefs:
-        - kind: Secret
-          group: ""
-          name: harbor-gateway-tls
-        # The TLS configuration references a Secret containing the TLS certificate.
- 
----
-# STEP 5: Create an HTTPRoute for the services in Harbor and attach it to the Gateway created in STEP 4.
-# Similar to the Canfar HTTPRoute, this defines routing rules for Harbor services.
- 
-apiVersion: gateway.networking.k8s.io/v1
-kind: HTTPRoute
-metadata:
-  name: harbor-httproutes
-  namespace: harbor
-spec:
-  hostnames:
-    - "harbor.e4r.internal"
-    # HTTPRoute applies to traffic matching this hostname.
-  parentRefs:
-    - name: envoy-harbor-gateway
-      namespace: default
-    # This HTTPRoute is attached to the 'envoy-harbor-gateway' Gateway defined earlier.
-  rules:
-    # Define routing rules for various paths within Harbor
-    - backendRefs:
-        - name: harbor-portal
-          port: 80
-      matches:
-        - path:
-            type: PathPrefix
-            value: /
-    - backendRefs:
-        - name: harbor-core
-          port: 80
-      matches:
-        - path:
-            type: PathPrefix
-            value: /c
-    - backendRefs:
-        - name: harbor-core
-          port: 80
-      matches:
-        - path:
-            type: PathPrefix
-            value: /chartrepo
-    - backendRefs:
-        - name: harbor-core
-          port: 80
-      matches:
-        - path:
-            type: PathPrefix
-            value: /v2
-    - backendRefs:
-        - name: harbor-core
-          port: 80
-      matches:
-        - path:
-            type: PathPrefix
-            value: /service
-    - backendRefs:
-        - name: harbor-core
-          port: 80
-      matches:
-        - path:
-            type: PathPrefix
-            value: /api
-```
