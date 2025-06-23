@@ -1,0 +1,53 @@
+pipeline {
+    agent {
+        kubernetes {
+            yaml """
+                apiVersion: v1
+                kind: Pod
+                spec:
+                  containers:
+                    - name: docker
+                      image: docker:latest
+                      command:
+                        - cat
+                      tty: true
+                      securityContext:
+                        privileged: true
+                      volumeMounts:
+                        - name: docker-sock
+                          mountPath: /var/run/docker.sock
+                  volumes:
+                    - name: docker-sock
+                      hostPath:
+                        path: /var/run/docker.sock
+            """
+        }
+    }
+    stages {
+        stage('Clone Repository') {
+            steps {
+                container('docker') {
+                    sh 'git clone https://github.com/abhishekghoshh/dotfiles.git'
+                }
+            }
+        }
+        stage('Change Directory') {
+            steps {
+                container('docker') {
+                    dir('dotfiles') {
+                        sh 'ls -la'
+                    }
+                }
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                container('docker') {
+                    dir('dotfiles') {
+                        sh 'docker build -t abhishekghoshh/dotfiles .'
+                    }
+                }
+            }
+        }
+    }
+}

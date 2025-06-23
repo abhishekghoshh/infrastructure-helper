@@ -1,0 +1,34 @@
+{{- if .Values.persistence.enabled }}
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: jenkins-pv
+spec:
+  capacity:
+    storage: {{ .Values.persistence.size }}
+  accessModes:
+    {{- range .Values.persistence.accessModes }}
+    - {{ . }}
+    {{- end }}
+  persistentVolumeReclaimPolicy: {{ .Values.persistence.reclaimPolicy | default "Retain" }}
+  storageClassName: {{ .Values.persistence.storageClassName }}
+  {{- if .Values.persistence.hostPath }}
+  hostPath:
+    path: {{ .Values.persistence.hostPath }}
+  {{- end }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jenkins-pvc
+spec:
+  accessModes:
+    {{- range .Values.persistence.accessModes }}
+    - {{ . }}
+    {{- end }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.size }}
+  storageClassName: {{ .Values.persistence.storageClassName }}
+  volumeName: jenkins-pv
+{{- end }}
