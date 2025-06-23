@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: jenkins
+spec:
+  destination:
+    namespace: jenkins
+    server: https://kubernetes.default.svc
+  source:
+    path: docs/jenkins/kubernetes-agent
+    repoURL: https://github.com/abhishekghoshh/infrastructure-helper
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true

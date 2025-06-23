@@ -1,11 +1,10 @@
-version: '3'
-
 services:
   infrastructure-helper:
-    container_name: infrastructure-helper
-    image: abhishek1009/infrastructure-helper:latest
+    container_name: infrastructure-helper-docs
+    image: abhishek1009/infrastructure-helper-docs:latest
     build:
       context: .  # Set the build context to the docs directory
+      dockerfile: Dockerfile.docs  # Specify the Dockerfile to use
     ports:
       - "8000:8000"
     # volume mount so that it will get the local changes automatically

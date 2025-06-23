@@ -95,6 +95,7 @@ nav:
     - pulumni: iac/pulumni.md
   - terraform:
     - introduction: terraform/introduction.md
+    - concepts: terraformt/concepts.md
     - links: terraform/links.md
   - gitops:
     - argo-cd: gitops/argo-cd.md
