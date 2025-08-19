@@ -11,9 +11,10 @@
 
 ## Youtube
 
+- [Monitoring Made EASY with Grafana and Prometheus!](https://www.youtube.com/watch?v=pGSkPutCKtQ)
+- [Open Source Observability Explained - The Grafana Stack](https://www.youtube.com/watch?v=WSW1urIXsfA)
 - [Grafana is the goat... Let's deploy the LGTM stack](https://www.youtube.com/watch?v=1X3dV3D5EJg)
 - [What is OpenTelemetry?](https://www.youtube.com/watch?v=ASgosEzG4Pw)
-- [Open Source Observability Explained - The Grafana Stack](https://www.youtube.com/watch?v=WSW1urIXsfA)
 - [What is OpenTelemetry? - Explanation and Demo](https://www.youtube.com/watch?v=LzLULxhyIpU)
 - [OpenTelemetry Collector: EVERYTHING you need to know [to get started]](https://www.youtube.com/watch?v=_CJrFW_yjRo)
 
