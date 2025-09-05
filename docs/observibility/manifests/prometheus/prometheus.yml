@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s # By default, scrape targets every 15 seconds.
+
+# The `scrape_configs` section contains a list of jobs to scrape.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'go-api'
+    # metrics_path defaults to /metrics
+    static_configs:
+      - targets: ['go-api:8080']
+
