@@ -1,5 +1,8 @@
 
 
+### Stacks
+- **LGTM**: Loki, Grafana, Tempo, Mimir
+
 
 OTLP -> Open telemetry protocol
 Collectors -> Open telemtery collectors, Grafana Alloy

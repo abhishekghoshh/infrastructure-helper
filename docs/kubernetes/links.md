@@ -17,12 +17,31 @@
 
 
 ### Playlists
-- [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnHmccp2xlBENZ1xr4FpjXF)
-- [AWS EKS Kubernetes Tutorial [Full Course]](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l)
-- [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXmoKAmRh38U1-QEeh2dGEOX)
+
+- [Anton Putra](https://www.youtube.com/@AntonPutra/playlists)
+  - [Kubernetes Tutorial for Beginners [Full Course]](https://www.youtube.com/playlist?list=PLiMWaCMwGJXkYKFa_x0Ch38uznuv-4c3l)   **Architecture deep dive**
+  - [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnHmccp2xlBENZ1xr4FpjXF)                              **Kubernetes components**
+  - [AWS EKS Kubernetes Tutorial [Full Course]](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l)
+  - [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXmoKAmRh38U1-QEeh2dGEOX)
+
+- [Kubernetes](https://www.youtube.com/playlist?list=PLdpzxOOAlwvJdsW6A0jCz_3VaANuFMLpc)
+
 - [Kubernetes Tutorial](https://www.youtube.com/playlist?list=PLyicRj904Z99pBOBXCCBosUuc1nU2CO10)
 - [Kubernetes Full Course](https://www.youtube.com/watch?v=YHuZ78Ig_oc&list=PLrMP04WSdCjrkNYSFvFeiHrfpsSVDFMDR)
 - [Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=Q9Z75x29Uf4&list=PL8klaCXyIuQ7DlznvhkxVfSC3Bp6vHcCN)
+
+
+### Project
+
+- [2-Tier Application Deployment Series](https://www.youtube.com/playlist?list=PLlfy9GnSVerRpz3u8casjjv1eNJr9tlR9)
+
+
+
+### Build your own kubernetes
+
+- [Build Your Own Kubernetes - High Level Design](https://www.youtube.com/watch?v=J_mQFJ7aBxU)
+
+
 
 ### Ingress and Load balancers(MetalLb)
 - **blogs**

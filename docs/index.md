@@ -8,11 +8,22 @@ docker run -it techworldwithnana/youtube:linux-tutorial
 ```
 
 
-## Prerequisites
+## Youtube 
 
-### Abhishek Veeramalla
+
+### Channels
+
+- [Abhishek.Veeramalla](https://www.youtube.com/@AbhishekVeeramalla/playlists)
+- [TrainWithShubham](https://www.youtube.com/@TrainWithShubham/playlists)
+- [Cloud Champ](https://www.youtube.com/@cloudchamp/playlists)
+
+
+### Playlists
+
 - [DEVOPS ZERO TO HERO COURSE](https://www.youtube.com/playlist?list=PLdpzxOOAlwvIKMhk8WhzN1pYoJ1YU8Csa)
     - [iam-veeramalla/Jenkins-Zero-To-Hero](https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero)
+
+
 
 
 

@@ -2,7 +2,30 @@
 
 ## Books
 
+
+
+## Researches
+
+- [Jupiter Rising: A Decade of Clos Topologies and Centralized Control in Google's Datacenter Network](https://research.google/pubs/jupiter-rising-a-decade-of-clos-topologies-and-centralized-control-in-googles-datacenter-network/)
+
+
+
+
 ## Youtube
+
+### Introduction
+
+- [Every Protocol Explained As QUICKLY As Possible!](https://www.youtube.com/watch?v=aSQq1ewECgk)
+- [Every Networking Concept Explained In 8 Minutes](https://www.youtube.com/watch?v=vtUHgkTKju0)
+- [Networking For Hackers! (Common Network Protocols)](https://www.youtube.com/watch?v=p3vaaD9pn9I)
+- [OSI and TCP IP Models - Best Explanation](https://www.youtube.com/watch?v=3b_TAYtzuho)
+
+- [Google's 1.3Pb/s "Jupiter" Network | System Design](https://www.youtube.com/watch?v=ArBL7eQwc_Q)
+
+
+
+### Playlists
+
 - [General Security Education](https://www.youtube.com/playlist?list=PLhixgUqwRTjz6VwU3uDK_Pk6F5Tl0KuoC)
 - [Computer Networking Full Course - OSI Model Deep Dive with Real Life Examples](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 - [Computer Networking Course - Network Engineering - CompTIA Network+ Exam Prep](https://www.youtube.com/watch?v=qiQR5rTSshw)

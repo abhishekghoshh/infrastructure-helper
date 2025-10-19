@@ -27,6 +27,15 @@
 - [Effortless Docker Management with LazyDocker: A Terminal UI for Containers, Images and Networks!](https://www.youtube.com/watch?v=G955-w-BIQQ)
 
 
+### Docker
+
+- [Piyush Garg](https://www.youtube.com/@piyushgargdev/playlists)
+  - [Docker | Beginners](https://www.youtube.com/playlist?list=PLinedj3B30sDvBfeK9EPz9pcJNlM0f3ph)
+  - [Master Docker Containerisation & Deployments](https://www.youtube.com/playlist?list=PLinedj3B30sDc2woh6XncR9_a310zaAyJ)
+  - [Docker Management API - Build Your Own Docker Orchestration](https://www.youtube.com/watch?v=t9bYz_G1UrY)
+
+- [docker personal](https://www.youtube.com/playlist?list=PL67qvtIf7OxvjUuSCAYO45TBPZ4QP2Rcu)
+
 
 ## Blogs
 

@@ -44,10 +44,29 @@
 - [AWS EKS Kubernetes Tutorial [Full Course]](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l)
 
 
+- [Top AWS Services Explained - System Design](https://www.youtube.com/watch?v=3WZzmiAkYBQ)
+- [Top Advance AWS Services Explained - System Design](https://www.youtube.com/watch?v=s2jD2E3YN30)
+
+
+
 ## Youtube playlists
 
 - [AWS Zero to Hero - AWS Simplified](https://www.youtube.com/playlist?list=PLdpzxOOAlwvLNOxX0RfndiYSt1Le9azze)
     - [iam-veeramalla/aws-devops-zero-to-hero](https://github.com/iam-veeramalla/aws-devops-zero-to-hero)
+
+- [Piyush Garg](https://www.youtube.com/@piyushgargdev)
+  - [AWS - Amazon Web Services](https://www.youtube.com/playlist?list=PLinedj3B30sDZ17Fpe3xGUDRBkutaGyUp)
+
+- [KodeKloud](https://www.youtube.com/@KodeKloud/playlists)
+  - [AWS](https://www.youtube.com/playlist?list=PL2We04F3Y_41Q_1_7cuOa9HDcFziJPWpt)
+  - [AWS Cloud Practitioner (CLF-C02)](https://www.youtube.com/playlist?list=PL2We04F3Y_40odFuI_6DjJrfJFzOOs7vr)
+
+- [Tiny Technical Tutorials](https://www.youtube.com/@TinyTechnicalTutorials/playlists)
+  - [AWS: Learn Amazon Web Services (AWS) with bite-size tutorials that are easy to understand](https://www.youtube.com/playlist?list=PLwyXYwu8kL0wg9R_VMeXy0JiK5_c70IrV)
+  - [AWS Projects: Get hands-on practice with multiple AWS services](https://www.youtube.com/playlist?list=PLwyXYwu8kL0wMalR9iXJIPfiMYWNFWQzx)
+
+- [DGR Uploads](https://www.youtube.com/@DGRUploads/playlists)
+  - [AWS_Interview_Questions](https://www.youtube.com/playlist?list=PLEr0Q0hLeaQcHRPOcWMiRqTO9yilB5yGh)
 
 - [Digital Cloud Training](https://www.youtube.com/@DigitalCloudTraining/playlists)
     - [AWS Serverless with AWS Lambda, API Gateway & EventBridge | Full Course for Beginners](https://www.youtube.com/watch?v=5rG-YgTHMC8)
@@ -69,9 +88,6 @@
 
 - [AWS Cloud Computing Course](https://www.youtube.com/playlist?list=PL0X6fGhFFNTcU-_MCPe9dkH6sqmgfhy_M)
 
-- [Tiny Technical Tutorials](https://www.youtube.com/@TinyTechnicalTutorials/playlists)
-  - [AWS: Learn Amazon Web Services (AWS) with bite-size tutorials that are easy to understand](https://www.youtube.com/playlist?list=PLwyXYwu8kL0wg9R_VMeXy0JiK5_c70IrV)
-  - [AWS Projects: Get hands-on practice with multiple AWS services](https://www.youtube.com/playlist?list=PLwyXYwu8kL0wMalR9iXJIPfiMYWNFWQzx)
 
 - [AWS Tutorials by pixegami](https://www.youtube.com/playlist?list=PLZJBfja3V3RuPay0u44BLUDewcGeKk5lv)
 
