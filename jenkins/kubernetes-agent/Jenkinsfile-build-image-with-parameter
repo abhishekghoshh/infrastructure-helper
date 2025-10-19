@@ -1,0 +1,74 @@
+pipeline {
+    agent {
+        kubernetes {
+            yaml """
+                apiVersion: v1
+                kind: Pod
+                spec:
+                  containers:
+                    - name: docker
+                      image: docker:latest
+                      command:
+                        - cat
+                      tty: true
+                      securityContext:
+                        privileged: true
+                      volumeMounts:
+                        - name: docker-sock
+                          mountPath: /var/run/docker.sock
+                  volumes:
+                    - name: docker-sock
+                      hostPath:
+                        path: /var/run/docker.sock
+            """
+        }
+    }
+    parameters {
+        string(name: 'GIT_URL', description: 'Git repository URL')
+        string(name: 'IMAGE_NAME', description: 'Docker image name (e.g. user/repo:tag)')
+    }
+    stages {
+        stage('Clone Repository') {
+            steps {
+                container('docker') {
+                    sh 'git clone ${GIT_URL}'
+                }
+            }
+        }
+        stage('Change Directory') {
+            steps {
+                container('docker') {
+                    dir("${GIT_URL.tokenize('/').last()}") {
+                        sh 'ls -la'
+                    }
+                }
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                container('docker') {
+                    dir("${GIT_URL.tokenize('/').last()}") {
+                        sh 'docker build -t ${IMAGE_NAME} .'
+                    }
+                }
+            }
+        }
+        stage('Push Docker Image') {
+            steps {
+                container('docker') {
+                    withCredentials([usernamePassword(credentialsId: 'docker-hub-token', usernameVariable: 'DOCKERHUB_USER', passwordVariable: 'DOCKERHUB_TOKEN')]) {
+                        sh "echo \$DOCKERHUB_TOKEN | docker login -u \$DOCKERHUB_USER --password-stdin"
+                        sh "docker push ${IMAGE_NAME}"
+                    }
+                }
+            }
+        }
+    }
+    post {
+        always {
+            container('docker') {
+                sh 'docker logout || true'
+            }
+        }
+    }
+}

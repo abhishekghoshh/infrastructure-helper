@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: sleep-1000
+  labels:
+    kueue.x-k8s.io/queue-name: test
+spec:
+  parallelism: 1
+  completions: 1
+  suspend: true
+  template:
+    spec:
+      restartPolicy: "Never"
+      containers:
+      - name: sleep-times
+        image: busybox
+        command: ["/bin/sh", "-c", "sleep 1000"]
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "500Mi"
+            ephemeral-storage: "500Mi"
+        volumeMounts:
+        - name: data
+          mountPath: /data
+      volumes:
+      - name: data
+        hostPath:
+          path: /kueue/test
+          type: DirectoryOrCreate

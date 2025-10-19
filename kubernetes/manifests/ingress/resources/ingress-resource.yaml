@@ -1,0 +1,64 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo
+  labels:
+    type: echo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      type: echo
+  template:
+    metadata:
+      labels:
+        type: echo
+    spec:
+      containers:
+      - name: echo
+        image: abhishek1009/echo:latest
+        ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo
+spec:
+  selector:
+    type: echo
+  ports:
+  - port: 80
+    targetPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-nodeport
+spec:
+  type: NodePort
+  selector:
+    type: echo
+  ports:
+  - port: 8000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: echo
+  # annotations:
+  #   nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: app.reactor.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: echo
+                port:
+                  number: 80
+            pathType: Prefix
+            path: /echo
+

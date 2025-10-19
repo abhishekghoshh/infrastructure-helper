@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Math-app-pod
+  labels:
+    name: math-app-pod
+spec:
+  containers:
+  - name: math-app-pod
+    image: ubuntu
+    command: ["expr" , "3" , "+" , "2"]
