@@ -15,6 +15,7 @@
 
 - [What is OpenTelemetry?](https://www.youtube.com/watch?v=ASgosEzG4Pw)
 - [What is OpenTelemetry? - Explanation and Demo](https://www.youtube.com/watch?v=LzLULxhyIpU)
+- [Open Source Observability Explained - The Grafana Stack](https://www.youtube.com/watch?v=WSW1urIXsfA)
 - [OpenTelemetry Collector: EVERYTHING you need to know [to get started]](https://www.youtube.com/watch?v=_CJrFW_yjRo)
 - [Monitoring Made EASY with Grafana and Prometheus!](https://www.youtube.com/watch?v=pGSkPutCKtQ)
   - [Creating Grafana Dashboards for Prometheus: A Beginner's Guide](https://betterstack.com/community/guides/monitoring/visualize-prometheus-metrics-grafana/)
@@ -24,8 +25,6 @@
 
 
 ## Tutorials
-
-- [Open Source Observability Explained - The Grafana Stack](https://www.youtube.com/watch?v=WSW1urIXsfA)
 
 - [Learn Observability in 5 hours | Tool wise Demo + Complete Demo using Open Telemetry](https://www.youtube.com/watch?v=cYAE0ZhT43c)
     - [iam-veeramalla/observability-zero-to-hero](https://github.com/iam-veeramalla/observability-zero-to-hero/)
@@ -43,8 +42,7 @@
     - [𝗢𝗧𝗲𝗹 𝗔𝗽𝗽 𝗣𝗿𝗼𝗷𝗲𝗰𝘁 𝘀𝘁𝗲𝗽 𝗯𝘆 𝘀𝘁𝗲𝗽 𝗗𝗼𝗰𝘂𝗺𝗲𝗻𝘁](https://www.linkedin.com/posts/nasiullha-chaudhari_otel-app-project-step-by-step-document-activity-7232614782866980864-bsMb/?utm_source=share&utm_medium=member_desktop)
 
 - [Prometheus Fundamentals](https://www.youtube.com/playlist?list=PLyBW7UHmEXgylLwxdVbrBQJ-fJ_jMvh8h)
-- [Prometheus](https://www.youtube.com/playlist?list=PL2We04F3Y_40sa5vC1h5mhVWzFmm1J-TG)
-- [Prometheus Monitoring Full Tutorial](https://www.youtube.com/playlist?list=PLy7NrYWoggjxCF3av5JKwyG7FFF9eLeL4)
+- [Grafana for Beginners](https://www.youtube.com/playlist?list=PLDGkOdUX1Ujo27m6qiTPPCpFHVfyKq9jT)
 
 - [OpenTelemetry](https://www.youtube.com/playlist?list=PL6VBQyIvTlRjAMeeZN5yfD07X8DdYonnI)
 - [Observability](https://www.youtube.com/playlist?list=PLyicRj904Z9-kyG_J5DAXbYhRmWUJ-Iqf)
@@ -73,6 +71,7 @@
 
 
 
+
 ## Medium
 
 - [The Observability in Distributed Systems](https://marcospereirajr.com.br/the-observability-in-distributed-systems-d11e893e10f7)
@@ -89,6 +88,8 @@
 - [HTTP Tracing with Spring Boot, Zipkin and Open Telemetry](https://blog.devgenius.io/http-tracing-with-spring-boot-zipkin-and-open-telemetry-c12e4c599da4)
 - [Monitoring Spring Boot Microservices (Prometheus, Grafana & Zipkin)](https://blog.devgenius.io/monitoring-spring-boot-microservices-prometheus-grafana-zipkin-6430b767795e)
 - [Monitoring the Golang App with Prometheus, Grafana, New Relic and Sentry](https://medium.com/@mertcakmak2/monitoring-the-golang-app-with-prometheus-grafana-new-relic-and-sentry-fce1ca6980b5)
+
+
 - [A Guide to Deploying Jaeger on Kubernetes in Production](https://medium.com/jaegertracing/a-guide-to-deploying-jaeger-on-kubernetes-in-production-69afb9a7c8e5)
 - [Introducing native support for OpenTelemetry in Jaeger](https://medium.com/jaegertracing/introducing-native-support-for-opentelemetry-in-jaeger-eb661be8183c)
 

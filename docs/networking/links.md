@@ -1,4 +1,4 @@
-# computer networking basics
+# Computer Networking Links
 
 ## Books
 
@@ -38,6 +38,7 @@
 ## Udemy
 
 ### Introduction
+
 - [Cisco - TCP/IP & OSI Network Architecture Models](https://www.udemy.com/course/cisco-tcpip-osi-network-architecture-models) 1.5 hr
 - [Subnetting Made Easy](https://udemy.com/course/subnetting-made-easy/) 1hr
 - [IT Networking Fundamentals For Complete Beginners](https://udemy.com/course/it-networking-fundamentals/) 3 hr
@@ -48,6 +49,7 @@
 
 
 ### Intermediate
+
 - [OSPF for the Real World - From Zero to Hero](https://udemy.com/course/ospf-for-the-real-world-from-zero-to-hero/) 6.5 hr
 - [Cyber Security: From Beginner to Expert (2024)](https://udemy.com/course/cybersecurity-from-beginner-to-expert/) 7 hr
 - [Introduction to Networking](https://udemy.com/course/introduction-to-networking/) 7.5 hr
@@ -56,5 +58,11 @@
 
 
 ### CCNA 200-301
+
 - [Cisco CCNA 200-301 - The Complete Guide to Getting Certified](https://udemy.com/course/ccna-complete/) 40 hr
 - [The Complete Networking Fundamentals Course. Your CCNA start](https://udemy.com/course/complete-networking-fundamentals-course-ccna-start/) 79.5 hr
+
+
+### Projects
+
+- [Master the socket programming concepts and start building networked applications in C programming language](https://www.udemy.com/course/learn-socket-programming-in-c-from-scratch)

@@ -1,18 +1,24 @@
 # Kubernetes
 
+
 ## Udemy
+
 - [Certified Kubernetes Application Developer](https://www.udemy.com/course/certified-kubernetes-application-developer)
+  - [Certified Kubernetes Application Developer - CKAD](https://notes.kodekloud.com/docs/Certified-Kubernetes-Application-Developer-CKAD/First-Section/Introduction)
 - [Certified Kubernetes Administrator (CKA) with Practice Tests](https://udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
+  - [kodekloudhub/certified-kubernetes-administrator-course](https://github.com/kodekloudhub/certified-kubernetes-administrator-course)
+  - [CKA Certification Course - Certified Kubernetes Administrator](https://notes.kodekloud.com/docs/CKA-Certification-Course-Certified-Kubernetes-Administrator/Introduction/Course-Introduction)
 
 
 ## YouTube
 
 ### Single videos
+
+- [Why is Kubernetes Popular | What is Kubernetes?](https://www.youtube.com/watch?v=lv0DdVLZuHc)
 - [What is Kubernetes | Kubernetes explained in 15 mins](https://www.youtube.com/watch?v=VnvRFRk_51k)
 - [Kubernetes Explained in 15 Minutes | Hands On (2024 Edition)](https://www.youtube.com/watch?v=r2zuL9MW6wc)
 - [Do NOT Learn Kubernetes Without Knowing These Concepts...](https://www.youtube.com/watch?v=wXuSqFJVNQA)
-- [Why is Kubernetes Popular | What is Kubernetes?](https://www.youtube.com/watch?v=lv0DdVLZuHc)
-- [Kubernetes Architecture: Deep Dive](https://www.youtube.com/watch?v=gjk82Y2vyro)
+- [What is Kubernetes? | Kubernetes Explained](https://www.youtube.com/watch?v=a-nWPre5QYI)
 - [Kubernetes Tutorial with Microservices and Cloud | Kubernetes Course](https://www.youtube.com/watch?v=EY3uDfBG0OY)
 
 
@@ -23,6 +29,7 @@
   - [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnHmccp2xlBENZ1xr4FpjXF)                              **Kubernetes components**
   - [AWS EKS Kubernetes Tutorial [Full Course]](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l)
   - [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLiMWaCMwGJXmoKAmRh38U1-QEeh2dGEOX)
+  - [100 Seconds of Code](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnjNhBQF-vR2Xqal0hN9U2-)
 
 - [Kubernetes](https://www.youtube.com/playlist?list=PLdpzxOOAlwvJdsW6A0jCz_3VaANuFMLpc)
 
@@ -30,11 +37,12 @@
 - [Kubernetes Full Course](https://www.youtube.com/watch?v=YHuZ78Ig_oc&list=PLrMP04WSdCjrkNYSFvFeiHrfpsSVDFMDR)
 - [Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=Q9Z75x29Uf4&list=PL8klaCXyIuQ7DlznvhkxVfSC3Bp6vHcCN)
 
+- [Certified Kubernetes Administrator Full Course For beginners | CKA 2025](https://www.youtube.com/playlist?list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC)
+
 
 ### Project
 
 - [2-Tier Application Deployment Series](https://www.youtube.com/playlist?list=PLlfy9GnSVerRpz3u8casjjv1eNJr9tlR9)
-
 
 
 ### Build your own kubernetes
@@ -105,4 +113,3 @@
 - [Kubernetes Admission Controller](https://www.armosec.io/blog/kubernetes-admission-controller/)
 - [Custom Admission Controller](https://docs.giantswarm.io/advanced/custom-admission-controller/)
 - [Encrypting Secret Data at Rest in Kubernetes](https://thoughtworks.udemy.com/course/certified-kubernetes-application-developer/learn/lecture/34549240#overview)
-
