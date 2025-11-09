@@ -32,9 +32,11 @@
   - [100 Seconds of Code](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnjNhBQF-vR2Xqal0hN9U2-)
 
 - [Kubernetes](https://www.youtube.com/playlist?list=PLdpzxOOAlwvJdsW6A0jCz_3VaANuFMLpc)
+- [Kubernetes Tutorials](https://www.youtube.com/playlist?list=PLj-2elZxVPZ8U5_gxuF_GFWelIo9kFlAj)
 
 - [Kubernetes Tutorial](https://www.youtube.com/playlist?list=PLyicRj904Z99pBOBXCCBosUuc1nU2CO10)
 - [Kubernetes Full Course](https://www.youtube.com/watch?v=YHuZ78Ig_oc&list=PLrMP04WSdCjrkNYSFvFeiHrfpsSVDFMDR)
+
 - [Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=Q9Z75x29Uf4&list=PL8klaCXyIuQ7DlznvhkxVfSC3Bp6vHcCN)
 
 - [Certified Kubernetes Administrator Full Course For beginners | CKA 2025](https://www.youtube.com/playlist?list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC)
