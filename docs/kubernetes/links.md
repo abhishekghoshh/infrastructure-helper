@@ -44,12 +44,10 @@
 
 ### Project
 
-- [2-Tier Application Deployment Series](https://www.youtube.com/playlist?list=PLlfy9GnSVerRpz3u8casjjv1eNJr9tlR9)
-
-
-### Build your own kubernetes
-
 - [Build Your Own Kubernetes - High Level Design](https://www.youtube.com/watch?v=J_mQFJ7aBxU)
+- [2-Tier Application Deployment Series](https://www.youtube.com/playlist?list=PLlfy9GnSVerRpz3u8casjjv1eNJr9tlR9)
+- [DevSecOps End to End CICD Project | DevOps Engineer | SonarQube + OWASP + Trivy + Docker + Jenkins](https://www.youtube.com/watch?v=CoU38rJIjRY)
+- [DevOps Training](https://www.youtube.com/playlist?list=PLZv1rlQ0kEKh99f1AWdpG0ZQM-4VGaQN5)
 
 
 

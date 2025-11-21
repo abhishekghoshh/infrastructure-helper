@@ -1,6 +1,7 @@
 # Gateway API
 
 ## Medium
+
 - [Gateway API vs Ingress in Kubernetes: A Deep Dive with Architecture Diagrams-Part1](https://medium.com/@shahebazsayed07/gateway-api-vs-ingress-in-kubernetes-a-deep-dive-with-architecture-diagrams-part1-9e6c88086c21)
 - [Using Kong to access Kubernetes services, using a Gateway resource with no cloud provided LoadBalancer](https://medium.com/@martin.hodges/using-kong-to-access-kubernetes-services-using-a-gateway-resource-with-no-cloud-provided-8a1bcd396be9)
 - [Why do I need an API Gateway on a Kubernetes cluster](https://medium.com/@martin.hodges/why-do-i-need-an-api-gateway-on-a-kubernetes-cluster-c70f15da836c)
@@ -8,6 +9,7 @@
 
 
 ## Youtube
+
 - [Mastering Kubernetes: Service and Network APIs (Service, Ingress, GatewayAPI)](https://www.youtube.com/watch?v=-1H0BeN9hIk)
 - [GATEWAY API - Ingress is DEAD! Long live Ingress](https://www.youtube.com/watch?v=5D4Eh5XBLxU)
 - [Gateway API Explained: The Future of Kubernetes Networking](https://www.youtube.com/watch?v=xaZ87iSvMAI)
@@ -15,6 +17,7 @@
 
 
 ## Refferences
+
 - [Gateway API documentation](https://gateway-api.sigs.k8s.io/)
 - [From kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/gateway/)
 - [From google cloud](https://cloud.google.com/kubernetes-engine/docs/concepts/gateway-api)
@@ -22,6 +25,7 @@
 
 
 ## Implementations
+
 - [Implementations](https://gateway-api.sigs.k8s.io/implementations/)
 - [Envoy Gateway](https://gateway.envoyproxy.io/docs/tasks/quickstart/)
 - [nginx](https://docs.nginx.com/nginx-gateway-fabric/installation/installing-ngf/manifests/)

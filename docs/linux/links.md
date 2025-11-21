@@ -1,6 +1,14 @@
 # Linux
 
 
+## Medium
+
+- [21 Linux Commands That Feel Like Cheating](https://medium.com/@the_atomic_architect/linux-commands-that-feel-like-cheating-0676cb981fc5)
+- [My Favorite 8 CLI Tools for Everyday Development (2025 Edition)](https://bhavyansh001.medium.com/my-favorite-8-cli-tools-for-everyday-development-2025-edition-12340fad4b67)
+- [The Most Underrated Dev Tools of 2025](https://medium.com/@sajitharasathurai2/the-most-underrated-dev-tools-of-2025-681e580a19dd)
+
+
+
 ## Udemy
 
 ### Introduction
@@ -47,6 +55,7 @@
 ## youtube
 
 ### Origin
+
 - [Why Linux Rules the Data Center](https://www.youtube.com/watch?v=xDLBpe5gbUg)
 - [Why so many distros? The Weird History of Linux](https://www.youtube.com/watch?v=ShcR4Zfc6Dw)
 - [The Secret OS That Really Runs The World](https://www.youtube.com/watch?v=5Ll0G5yKJK0)
@@ -57,7 +66,8 @@
 - [Even Microsoft Uses Linux, So Why Don't We??](https://www.youtube.com/watch?v=l5a9jEtP-vg)
 
 
-### introduction
+### Introduction
+
 - [The 5 Things That Taught Me The Most About Linux](https://www.youtube.com/watch?v=bdr_RvmOpkQ)
 - [5 Common Mistakes New Linux Users Often Make](https://www.youtube.com/watch?v=nY9dVJ2EnSk)
 - [New Linux User: 10 Things I Wish I Knew When I First Started](https://www.youtube.com/watch?v=HIJ6LixbcAY)
@@ -73,6 +83,7 @@
 
    
 ### Terminal command
+
 - [Become a shell wizard in ~12 mins](https://www.youtube.com/watch?v=IYZDIhfAUM0)
 - [Unleash the Power of These 6 Linux Commands - Say Goodbye to Boring Terminal Screens](https://www.youtube.com/watch?v=51DH87ecfF8)
 - [Linux commands : Clear your Linux Basics in 25 min for beginners](https://www.youtube.com/watch?v=BGjTboXjH28)
@@ -81,23 +92,43 @@
 - [50 Linux Commands Every Developer Must Know](https://www.youtube.com/watch?v=l32UR9DcjLg)
 - [5 Command Line Tools That Boost Developer Productivity (2023)](https://www.youtube.com/watch?v=6ivti-DfZng)
 
+
+### Playlist
+
+- [Linux Essential Tools](https://www.youtube.com/playlist?list=PLpwHBRQVCyJP8Ta47vIgvG1rilqsU8_Pm)
+- [Linux Commands for Beginners](https://www.youtube.com/playlist?list=PLT98CRl2KxKHaKA9-4_I38sLzK134p4GJ)
+- [Linux Crash Course](https://www.youtube.com/playlist?list=PLT98CRl2KxKHKd_tH3ssq0HPrThx2hESW)
+- [Full Guides](https://www.youtube.com/playlist?list=PLT98CRl2KxKFfumnJiR8FxBsbJepGgMoN)
+- [Top Docs | Learn the Basics](https://www.youtube.com/playlist?list=PLTnRtjQN5iebLpaJpCuuzVqXyPI_h5x_t)
+
+
+
 ### Linux Command-Line Tips & Tricks
-  - [Linux Command-Line Tips & Tricks: Over 15 Examples!](https://www.youtube.com/watch?v=NsK7OPlK94U)
-  - [10 Linux Terminal Tips and Tricks to Enhance Your Workflow](https://www.youtube.com/watch?v=nkvW0-bVXPc)
+
+- [Linux Command-Line Tips & Tricks: Over 15 Examples!](https://www.youtube.com/watch?v=NsK7OPlK94U)
+- [10 Linux Terminal Tips and Tricks to Enhance Your Workflow](https://www.youtube.com/watch?v=nkvW0-bVXPc)
+
 
 ### Linux filesystem
+
 - [How Does Linux Boot Process Work?](https://www.youtube.com/watch?v=XpFsMB6FoOs)
 - [Linux Directories Explained in 100 Seconds](https://www.youtube.com/watch?v=42iQKuQodW4)
 - [Linux File System/Structure Explained!](https://www.youtube.com/watch?v=HbgzrKJvDRw)
 - [The Linux Filesystem Explained | How Each Directory is Used](https://www.youtube.com/watch?v=P0QZnAnsQ4c)
 
+
 ### Linux DNS Server
+
 - [Linux DNS Server](https://www.youtube.com/playlist?list=PL291a0KYQZSK6E_1j9xkkieCOi_867pyc)
 
+
 ### Sockets
+
 - [Unix Domain Socket in 100 seconds](https://www.youtube.com/watch?v=1UHaR54i3ak)
 
-### different linux distributions
+
+### Different linux distributions
+
 - [you need to learn Virtual Machines RIGHT NOW!! (Kali Linux VM, Ubuntu, Windows)](https://www.youtube.com/watch?v=wX75Z-4MEoM)
 	- [Virtual Machines Pt. 2 (Proxmox install w/ Kali Linux)](https://www.youtube.com/watch?v=_u8qTN3cCnQ)
 - [Switching to Linux](https://www.youtube.com/watch?v=tB_oSFLQXVo)
@@ -106,11 +137,4 @@
 - [The Linux Tier List](https://www.youtube.com/watch?v=KyADkmRVe0U)
 - [Ranking Linux Distributions for 2023: not your average tier list!](https://www.youtube.com/watch?v=d7-EhGIeGUs)
 - [You Only NEED 3 Linux Distributions](https://www.youtube.com/watch?v=t9e3NvTnCOA)
-
-- **series**
-  - [Linux Essential Tools](https://www.youtube.com/playlist?list=PLpwHBRQVCyJP8Ta47vIgvG1rilqsU8_Pm)
-  - [Linux Commands for Beginners](https://www.youtube.com/playlist?list=PLT98CRl2KxKHaKA9-4_I38sLzK134p4GJ)
-  - [Linux Crash Course](https://www.youtube.com/playlist?list=PLT98CRl2KxKHKd_tH3ssq0HPrThx2hESW)
-  - [Full Guides](https://www.youtube.com/playlist?list=PLT98CRl2KxKFfumnJiR8FxBsbJepGgMoN)
-  - [Top Docs | Learn the Basics](https://www.youtube.com/playlist?list=PLTnRtjQN5iebLpaJpCuuzVqXyPI_h5x_t)
 
